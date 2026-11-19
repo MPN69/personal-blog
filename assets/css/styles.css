@@ -5,13 +5,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom selection in Coffee #43270a */
+/* Custom selection in Professional Blue */
 ::selection {
-  background-color: #43270a;
+  background-color: #2563eb;
   color: #ffffff;
 }
 
-/* Modern subtle scrollbar with warm tint */
+/* Modern subtle scrollbar with blue-slate tint */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -21,21 +21,21 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(120, 72, 32, 0.3);
+  background: rgba(37, 99, 235, 0.25);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(67, 39, 10, 0.6);
+  background: rgba(37, 99, 235, 0.55);
 }
 
 /* Dark mode scrollbar */
 .dark ::-webkit-scrollbar-thumb {
-  background: rgba(197, 149, 112, 0.3);
+  background: rgba(96, 165, 250, 0.25);
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: rgba(197, 149, 112, 0.6);
+  background: rgba(96, 165, 250, 0.55);
 }
 
 /* Glassmorphism helpers */
@@ -46,15 +46,15 @@ html {
 }
 
 .dark .glass-panel {
-  background: rgba(18, 16, 14, 0.85);
+  background: rgba(15, 23, 42, 0.85);
 }
 
-/* Subtle card hover glow effect in warm coffee */
+/* Subtle card hover glow effect in professional blue */
 .hover-card-glow {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .hover-card-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(67, 39, 10, 0.12), 0 8px 10px -6px rgba(67, 39, 10, 0.08);
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.12), 0 8px 10px -6px rgba(37, 99, 235, 0.08);
 }

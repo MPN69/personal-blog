@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Visual feedback
         const originalHTML = copyBtn.innerHTML;
-        copyBtn.innerHTML = '<span class="text-[10px] font-bold text-amber-700 dark:text-amber-300">¡Copiado!</span>';
+        copyBtn.innerHTML = '<span class="text-[10px] font-bold text-blue-600 dark:text-blue-400">¡Copiado!</span>';
         
         setTimeout(() => {
           copyBtn.innerHTML = originalHTML;
@@ -93,14 +93,14 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => {
         const category = btn.getAttribute('data-category');
 
-        // Update button styles to match Coffee theme (#43270a)
+        // Update button styles to match Professional Blue theme
         categoryButtons.forEach(b => {
-          b.classList.remove('bg-[#43270a]', 'text-white');
-          b.classList.add('bg-white', 'dark:bg-stone-900', 'text-stone-600', 'dark:text-stone-300');
+          b.classList.remove('bg-blue-600', 'text-white');
+          b.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-300');
         });
 
-        btn.classList.add('bg-[#43270a]', 'text-white');
-        btn.classList.remove('bg-white', 'dark:bg-stone-900', 'text-stone-600', 'dark:text-stone-300');
+        btn.classList.add('bg-blue-600', 'text-white');
+        btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-300');
 
         // Filter posts
         postItems.forEach(post => {

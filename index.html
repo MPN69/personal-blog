@@ -24,17 +24,17 @@
           },
           colors: {
             brand: {
-              50: '#fbf7f4',
-              100: '#f5ebe2',
-              200: '#edd8c6',
-              300: '#e0bda2',
-              400: '#c59570',
-              500: '#9b643a',
-              600: '#784820',
-              700: '#593414',
-              800: '#43270a', // Color café solicitado
-              900: '#321c07',
-              950: '#1b0d03',
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb', // Azul profesional corporativo
+              700: '#1d4ed8',
+              800: '#1e40af', // Azul marino profundo
+              900: '#1e3a8a',
+              950: '#0f172a',
             }
           }
         }
@@ -46,57 +46,57 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body class="bg-[#faf8f6] text-stone-800 dark:bg-[#12100e] dark:text-stone-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#faf8f6]/85 dark:bg-[#12100e]/85 border-b border-stone-200/80 dark:border-stone-800/80">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-slate-950/85 border-b border-slate-200/80 dark:border-slate-800/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-2.5 group font-bold text-xl tracking-tight text-stone-900 dark:text-white">
-        <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#43270a] to-[#9b643a] flex items-center justify-center text-white text-sm font-black shadow-md shadow-[#43270a]/30 group-hover:scale-105 transition-transform">
+      <a href="#hero" class="flex items-center gap-2.5 group font-bold text-xl tracking-tight text-slate-900 dark:text-white">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-700 to-sky-500 flex items-center justify-center text-white text-sm font-black shadow-md shadow-brand-600/30 group-hover:scale-105 transition-transform">
           MP
         </span>
         <span class="font-extrabold tracking-tight">M. Peña<span class="text-brand-600 dark:text-brand-400 font-semibold text-sm">.dev</span></span>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-stone-600 dark:text-stone-300">
-        <a href="#sobre-mi" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Sobre mí</a>
-        <a href="#logros" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Logros & Hitos</a>
-        <a href="#trayectoria" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Trayectoria</a>
-        <a href="#proyectos" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Proyectos</a>
-        <a href="#hobbies" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Hobbies</a>
-        <a href="#blog" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Blog</a>
-        <a href="#contacto" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Contacto</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#sobre-mi" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Sobre mí</a>
+        <a href="#logros" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Logros & Hitos</a>
+        <a href="#trayectoria" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Trayectoria</a>
+        <a href="#proyectos" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Proyectos</a>
+        <a href="#hobbies" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Hobbies</a>
+        <a href="#blog" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Blog</a>
+        <a href="#contacto" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contacto</a>
       </nav>
 
       <!-- Right Action & Theme Toggle -->
       <div class="flex items-center gap-3">
-        <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro" class="p-2 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-900 transition-all">
+        <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all">
           <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
           <i data-lucide="sun" class="w-4 h-4 block dark:hidden"></i>
         </button>
 
-        <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold px-4 py-2 rounded-xl bg-[#43270a] hover:bg-[#593414] text-white dark:bg-stone-100 dark:text-[#43270a] dark:hover:bg-white shadow-sm transition-all">
+        <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:bg-brand-600 dark:hover:bg-brand-50 shadow-sm transition-all">
           <span>Hablemos</span>
           <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
         </a>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" aria-label="Abrir menú" class="md:hidden p-2 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300">
+        <button id="mobile-menu-btn" aria-label="Abrir menú" class="md:hidden p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">
           <i data-lucide="menu" class="w-5 h-5"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-stone-200 dark:border-stone-800 bg-[#faf8f6]/95 dark:bg-[#12100e]/95 px-6 py-4 space-y-3 text-sm font-medium">
-      <a href="#sobre-mi" class="block text-stone-700 dark:text-stone-200 hover:text-brand-800">Sobre mí</a>
-      <a href="#logros" class="block text-stone-700 dark:text-stone-200 hover:text-brand-800">Logros & Hitos</a>
-      <a href="#trayectoria" class="block text-stone-700 dark:text-stone-200 hover:text-brand-800">Trayectoria</a>
-      <a href="#proyectos" class="block text-stone-700 dark:text-stone-200 hover:text-brand-800">Proyectos</a>
-      <a href="#hobbies" class="block text-stone-700 dark:text-stone-200 hover:text-brand-800">Hobbies</a>
-      <a href="#blog" class="block text-stone-700 dark:text-stone-200 hover:text-brand-800">Blog</a>
-      <a href="#contacto" class="block text-stone-700 dark:text-stone-200 hover:text-brand-800">Contacto</a>
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 px-6 py-4 space-y-3 text-sm font-medium">
+      <a href="#sobre-mi" class="block text-slate-700 dark:text-slate-200 hover:text-brand-600">Sobre mí</a>
+      <a href="#logros" class="block text-slate-700 dark:text-slate-200 hover:text-brand-600">Logros & Hitos</a>
+      <a href="#trayectoria" class="block text-slate-700 dark:text-slate-200 hover:text-brand-600">Trayectoria</a>
+      <a href="#proyectos" class="block text-slate-700 dark:text-slate-200 hover:text-brand-600">Proyectos</a>
+      <a href="#hobbies" class="block text-slate-700 dark:text-slate-200 hover:text-brand-600">Hobbies</a>
+      <a href="#blog" class="block text-slate-700 dark:text-slate-200 hover:text-brand-600">Blog</a>
+      <a href="#contacto" class="block text-slate-700 dark:text-slate-200 hover:text-brand-600">Contacto</a>
     </div>
   </header>
 
@@ -105,52 +105,52 @@
 
     <!-- HERO SECTION -->
     <section id="hero" class="relative overflow-hidden pt-14 pb-20 md:pt-24 md:pb-32">
-      <!-- Glow background decoration in warm coffee & bronze -->
-      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[32rem] h-[32rem] bg-[#43270a]/12 dark:bg-[#9b643a]/15 rounded-full blur-3xl pointer-events-none"></div>
+      <!-- Glow background decoration in professional blue -->
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[34rem] h-[34rem] bg-brand-500/15 dark:bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
         <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
           
           <div class="flex-1 text-center lg:text-left">
             <!-- Pill Status -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100/70 dark:bg-brand-950/80 border border-brand-200 dark:border-brand-800 text-brand-800 dark:text-brand-200 text-xs font-semibold mb-6">
-              <span class="w-2 h-2 rounded-full bg-[#43270a] dark:bg-brand-400 animate-pulse"></span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 dark:bg-brand-950/80 border border-brand-200 dark:border-brand-800 text-brand-700 dark:text-brand-300 text-xs font-semibold mb-6 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-brand-600 dark:bg-brand-400 animate-pulse"></span>
               Innovación Digital @ Toyota Tsusho México
             </div>
 
-            <h1 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-stone-900 dark:text-white leading-[1.14]">
-              Creando impacto con <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#43270a] via-[#784820] to-[#b87333] dark:from-[#edd8c6] dark:via-[#c59570] dark:to-amber-300">Power Platform & Agentes de IA.</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.14]">
+              Creando impacto con <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 via-brand-600 to-sky-500 dark:from-brand-400 dark:via-sky-300 dark:to-cyan-300">Power Platform & Agentes de IA.</span>
             </h1>
 
-            <p class="mt-6 text-base sm:text-lg text-stone-600 dark:text-stone-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p class="mt-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Especialista en <strong>Microsoft Power Platform</strong>, <strong>Copilot Studio</strong> y <strong>Dynamics 365</strong>. Egresado con excelencia de La Salle Bajío. Diseñador de agentes inteligentes reconocidos por el equipo de <strong>Microsoft CAT</strong> y líder de automatización corporativa.
             </p>
 
             <!-- CTA Buttons -->
             <div class="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-              <a href="#proyectos" class="px-6 py-3 rounded-xl bg-[#43270a] hover:bg-[#593414] text-white font-semibold text-sm shadow-lg shadow-[#43270a]/25 transition-all flex items-center gap-2 hover:-translate-y-0.5">
+              <a href="#proyectos" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg shadow-brand-600/25 transition-all flex items-center gap-2 hover:-translate-y-0.5">
                 <i data-lucide="layers" class="w-4 h-4"></i>
                 <span>Ver mis proyectos</span>
               </a>
-              <a href="#logros" class="px-6 py-3 rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-800 dark:text-stone-200 font-semibold text-sm hover:bg-stone-50 dark:hover:bg-stone-800 transition-all flex items-center gap-2 hover:-translate-y-0.5">
-                <i data-lucide="award" class="w-4 h-4 text-[#784820] dark:text-brand-400"></i>
+              <a href="#logros" class="px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 font-semibold text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-all flex items-center gap-2 hover:-translate-y-0.5 shadow-sm">
+                <i data-lucide="award" class="w-4 h-4 text-brand-600 dark:text-brand-400"></i>
                 <span>Hitos & Microsoft Webinar</span>
               </a>
             </div>
 
             <!-- Mini stats -->
-            <div class="mt-12 pt-8 border-t border-stone-200 dark:border-stone-800 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0">
+            <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0">
               <div>
-                <p class="text-2xl font-bold text-stone-900 dark:text-white">PL-400 / 900</p>
-                <p class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">Certificaciones Microsoft</p>
+                <p class="text-2xl font-bold text-slate-900 dark:text-white">PL-400 / 900</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Certificaciones Microsoft</p>
               </div>
               <div>
-                <p class="text-2xl font-bold text-stone-900 dark:text-white">MS CAT</p>
-                <p class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">Ponente invitado</p>
+                <p class="text-2xl font-bold text-slate-900 dark:text-white">MS CAT</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Ponente invitado</p>
               </div>
               <div>
-                <p class="text-2xl font-bold text-stone-900 dark:text-white">Excelencia</p>
-                <p class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">La Salle Bajío</p>
+                <p class="text-2xl font-bold text-slate-900 dark:text-white">Excelencia</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">La Salle Bajío</p>
               </div>
             </div>
           </div>
@@ -159,17 +159,17 @@
           <div class="w-full max-w-sm lg:max-w-md">
             <div class="relative mx-auto">
               <!-- Glow halo -->
-              <div class="absolute inset-0 bg-gradient-to-tr from-[#43270a] to-[#b87333] rounded-3xl blur-2xl opacity-25 -rotate-3 scale-95"></div>
+              <div class="absolute inset-0 bg-gradient-to-tr from-brand-600 to-sky-400 rounded-3xl blur-2xl opacity-25 -rotate-3 scale-95"></div>
 
               <!-- Card -->
-              <div class="relative bg-white dark:bg-stone-900 rounded-3xl p-4 sm:p-5 border border-stone-200 dark:border-stone-800 shadow-2xl">
-                <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-stone-100 dark:bg-stone-800 shadow-inner">
+              <div class="relative bg-white dark:bg-slate-900 rounded-3xl p-4 sm:p-5 border border-slate-200 dark:border-slate-800 shadow-2xl">
+                <div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-inner">
                   <img src="https://i.postimg.cc/g0K2qVDJ/profile-img.webp" alt="Foto de perfil de M. Peña" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
                   
-                  <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl backdrop-blur-md bg-stone-950/80 border border-white/10 text-white text-xs flex items-center justify-between">
+                  <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl backdrop-blur-md bg-slate-950/80 border border-white/10 text-white text-xs flex items-center justify-between">
                     <div>
                       <p class="font-bold text-white text-sm">M. Peña</p>
-                      <p class="text-stone-300 text-[11px]">Power Platform & Digital Innovation</p>
+                      <p class="text-sky-200 text-[11px]">Power Platform & Digital Innovation</p>
                     </div>
                     <span class="px-2.5 py-1 rounded-full bg-emerald-600/90 text-white text-[10px] font-bold uppercase tracking-wider">
                       Activo
@@ -179,14 +179,14 @@
 
                 <!-- Fast tags -->
                 <div class="mt-4 flex flex-wrap gap-2 text-xs">
-                  <span class="px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 font-medium flex items-center gap-1.5">
-                    <i data-lucide="bot" class="w-3.5 h-3.5 text-[#784820] dark:text-brand-400"></i> Copilot Studio
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium flex items-center gap-1.5">
+                    <i data-lucide="bot" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i> Copilot Studio
                   </span>
-                  <span class="px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 font-medium flex items-center gap-1.5">
-                    <i data-lucide="cpu" class="w-3.5 h-3.5 text-[#784820] dark:text-brand-400"></i> Power Automate
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium flex items-center gap-1.5">
+                    <i data-lucide="cpu" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i> Power Automate
                   </span>
-                  <span class="px-2.5 py-1 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 font-medium flex items-center gap-1.5">
-                    <i data-lucide="glasses" class="w-3.5 h-3.5 text-[#784820] dark:text-brand-400"></i> Unity AR / VR
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium flex items-center gap-1.5">
+                    <i data-lucide="glasses" class="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"></i> Unity AR / VR
                   </span>
                 </div>
               </div>
@@ -198,19 +198,19 @@
     </section>
 
     <!-- SOBRE MÍ -->
-    <section id="sobre-mi" class="py-20 bg-stone-100/60 dark:bg-stone-900/40 border-y border-stone-200/60 dark:border-stone-800/60">
+    <section id="sobre-mi" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
         <div class="max-w-3xl">
-          <p class="text-xs uppercase font-bold tracking-widest text-brand-700 dark:text-brand-300">Quién soy</p>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-white mt-2">
+          <p class="text-xs uppercase font-bold tracking-widest text-brand-600 dark:text-brand-400">Quién soy</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
             De la realidad virtual al corazón de la automatización e IA empresarial
           </h2>
         </div>
 
         <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          <div class="lg:col-span-2 space-y-5 text-stone-600 dark:text-stone-300 leading-relaxed text-base">
+          <div class="lg:col-span-2 space-y-5 text-slate-600 dark:text-slate-300 leading-relaxed text-base">
             <p>
               Soy egresado con <strong>excelencia académica de la Universidad De La Salle Bajío</strong> en León, Gto (generación 2020-2024). Mi pasión por la creación interactiva comenzó mientras estudiaba, cuando realicé mis prácticas en <strong>Colektor</strong> desarrollando múltiples proyectos 2D, de Realidad Aumentada (AR) y Realidad Virtual (VR) utilizando el motor <strong>Unity</strong>.
             </p>
@@ -225,11 +225,11 @@
             </p>
 
             <div class="pt-4 flex flex-wrap gap-4 text-sm font-semibold">
-              <span class="text-brand-800 dark:text-brand-300 flex items-center gap-1.5">
+              <span class="text-brand-600 dark:text-brand-400 flex items-center gap-1.5">
                 <i data-lucide="map-pin" class="w-4 h-4"></i> León & Puerto Interior, Gto. México
               </span>
-              <span class="text-stone-400">•</span>
-              <a href="#logros" class="text-stone-600 dark:text-stone-300 hover:text-brand-800 dark:hover:text-brand-300 flex items-center gap-1">
+              <span class="text-slate-400">•</span>
+              <a href="#logros" class="text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-400 flex items-center gap-1">
                 Ver reconocimientos
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </a>
@@ -237,25 +237,25 @@
           </div>
 
           <!-- Highlight Box -->
-          <div class="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col justify-between">
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-brand-50 dark:bg-brand-950/80 text-brand-700 dark:text-brand-300 flex items-center justify-center mb-4">
+              <div class="w-10 h-10 rounded-xl bg-brand-50 dark:bg-brand-950/80 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-4">
                 <i data-lucide="sparkles" class="w-5 h-5"></i>
               </div>
-              <h3 class="font-bold text-lg text-stone-900 dark:text-white mb-2">Mi Enfoque de Innovación</h3>
-              <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Mi Enfoque de Innovación</h3>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                 "La verdadera innovación no se trata solo de adoptar tecnología nueva, sino de resolver problemas reales, empoderar a los equipos y crear experiencias fluidas con IA y automatización."
               </p>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800 space-y-2 text-xs">
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2 text-xs">
               <div class="flex items-center justify-between">
-                <span class="text-stone-500">Alma Máter</span>
-                <span class="font-semibold text-stone-800 dark:text-stone-200">La Salle Bajío (Excelencia)</span>
+                <span class="text-slate-500">Alma Máter</span>
+                <span class="font-semibold text-slate-800 dark:text-slate-200">La Salle Bajío (Excelencia)</span>
               </div>
               <div class="flex items-center justify-between">
-                <span class="text-stone-500">Empresa Actual</span>
-                <span class="font-semibold text-stone-800 dark:text-stone-200">Toyota Tsusho México</span>
+                <span class="text-slate-500">Empresa Actual</span>
+                <span class="font-semibold text-slate-800 dark:text-slate-200">Toyota Tsusho México</span>
               </div>
             </div>
           </div>
@@ -271,21 +271,21 @@
         
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
-            <p class="text-xs uppercase font-bold tracking-widest text-brand-700 dark:text-brand-300">Logros & Reconocimientos</p>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-white mt-2">
+            <p class="text-xs uppercase font-bold tracking-widest text-brand-600 dark:text-brand-400">Logros & Reconocimientos</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
               Hitos que marcan mi crecimiento
             </h2>
           </div>
-          <p class="text-sm text-stone-500 dark:text-stone-400 max-w-sm">
+          <p class="text-sm text-slate-500 dark:text-slate-400 max-w-sm">
             Resultados tangibles, reconocimiento de Microsoft y liderazgo en proyectos de gran envergadura.
           </p>
         </div>
 
-        <!-- Bento Grid Layout in Rich Coffee & Bronze Palette -->
+        <!-- Bento Grid Layout in Professional Corporate Blue -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
           
-          <!-- Bento 1: Gran Hito Microsoft Webinar (2 columnas en Deep Coffee #43270a) -->
-          <div class="md:col-span-2 bg-gradient-to-br from-[#321c07] via-[#43270a] to-[#784820] text-white p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between min-h-[290px] shadow-xl shadow-[#43270a]/25">
+          <!-- Bento 1: Gran Hito Microsoft Webinar (2 columnas en Deep Corporate Blue) -->
+          <div class="md:col-span-2 bg-gradient-to-br from-[#0c2d57] via-[#1d4ed8] to-[#0284c7] text-white p-8 rounded-3xl relative overflow-hidden flex flex-col justify-between min-h-[290px] shadow-xl shadow-brand-900/25">
             <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
             
             <div class="flex items-center justify-between">
@@ -293,36 +293,22 @@
                 Reconocimiento Internacional
               </span>
               <div class="flex items-center gap-2">
-                <i data-lucide="video" class="w-5 h-5 text-amber-200"></i>
+                <i data-lucide="video" class="w-5 h-5 text-sky-200"></i>
                 <i data-lucide="trophy" class="w-7 h-7 text-amber-300"></i>
               </div>
             </div>
 
-            <a href="https://www.youtube.com/watch?v=sLcjMjYmAkg" target="_blank" rel="noopener noreferrer"
-              class="block my-6 group rounded-2xl p-4 -mx-4 transition-all hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-amber-300/60">
-              <div class="flex items-center justify-between gap-2 mb-1">
-                <p class="text-xs font-mono text-amber-200 uppercase tracking-widest">
-                  Microsoft Customer Advisory Team (CAT)
-                </p>
-                <span
-                  class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-200 group-hover:translate-x-1 transition-transform">
-                  <span>Ver grabación</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                </span>
-              </div>
-            
-              <h3 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug group-hover:text-amber-200 transition-colors">
+            <div class="my-6">
+              <p class="text-xs font-mono text-sky-200 uppercase tracking-widest mb-1">Microsoft Customer Advisory Team (CAT)</p>
+              <h3 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug">
                 Ponente Invitado en Webinar Oficial de Microsoft
               </h3>
-            
-              <p class="mt-3 text-stone-100 text-sm sm:text-base max-w-2xl leading-relaxed">
-                Tras el rotundo éxito del <strong>Agente de IA para Tiendas CUADRA</strong> con Copilot Studio, el equipo global de
-                Microsoft CAT me convocó como panelista para presentar la arquitectura, alcance y capacidades del agente frente a
-                profesionales y líderes del ecosistema.
+              <p class="mt-3 text-slate-100 text-sm sm:text-base max-w-2xl leading-relaxed">
+                Tras el rotundo éxito del <strong>Agente de IA para Tiendas CUADRA</strong> con Copilot Studio, el equipo global de Microsoft CAT me convocó como panelista para presentar la arquitectura, alcance y capacidades del agente frente a profesionales y líderes del ecosistema.
               </p>
-            </a>
+            </div>
 
-            <div class="flex flex-wrap items-center gap-4 text-xs text-amber-100 pt-2 border-t border-white/15">
+            <div class="flex flex-wrap items-center gap-4 text-xs text-sky-100 pt-2 border-t border-white/15">
               <span class="flex items-center gap-1.5"><i data-lucide="bot" class="w-4 h-4 text-amber-300"></i> Copilot Studio & IA Generativa</span>
               <span>•</span>
               <span class="flex items-center gap-1.5"><i data-lucide="building-2" class="w-4 h-4 text-amber-300"></i> Tiendas CUADRA</span>
@@ -330,67 +316,67 @@
           </div>
 
           <!-- Bento 2: Certificaciones Microsoft -->
-          <div class="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 flex flex-col justify-between hover:border-brand-500/50 transition-all shadow-sm">
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/50 transition-all shadow-sm">
             <div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 flex items-center justify-center mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-950/80 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-4">
                 <i data-lucide="badge-check" class="w-6 h-6"></i>
               </div>
-              <h3 class="font-bold text-lg text-stone-900 dark:text-white">Certificaciones Microsoft</h3>
-              <p class="mt-2 text-sm text-stone-600 dark:text-stone-400">
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white">Certificaciones Microsoft</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
                 Acreditaciones oficiales obtenidas en AlgoritmoIT que avalan mis competencias técnicas avanzadas:
               </p>
-              <ul class="mt-3 space-y-2 text-xs font-mono text-stone-700 dark:text-stone-300">
+              <ul class="mt-3 space-y-2 text-xs font-mono text-slate-700 dark:text-slate-300">
                 <li class="flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-[#43270a] dark:bg-brand-400"></span>
+                  <span class="w-2 h-2 rounded-full bg-brand-600"></span>
                   <strong>PL-400:</strong> Power Platform Developer
                 </li>
                 <li class="flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-[#784820] dark:bg-amber-500"></span>
+                  <span class="w-2 h-2 rounded-full bg-sky-500"></span>
                   <strong>PL-900:</strong> Power Platform Fundamentals
                 </li>
               </ul>
             </div>
-            <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800 text-xs font-semibold text-brand-700 dark:text-brand-300 flex items-center justify-between">
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-semibold text-brand-600 dark:text-brand-400 flex items-center justify-between">
               <span>Microsoft Certified</span>
               <i data-lucide="shield-check" class="w-4 h-4"></i>
             </div>
           </div>
 
           <!-- Bento 3: Excelencia La Salle Bajío -->
-          <div class="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 flex flex-col justify-between hover:border-brand-500/50 transition-all shadow-sm">
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/50 transition-all shadow-sm">
             <div>
-              <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-950/80 text-brand-700 dark:text-brand-300 flex items-center justify-center mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-4">
                 <i data-lucide="graduation-cap" class="w-6 h-6"></i>
               </div>
-              <h3 class="font-bold text-lg text-stone-900 dark:text-white">Graduado con Excelencia</h3>
-              <p class="mt-2 text-sm text-stone-600 dark:text-stone-400">
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white">Graduado con Excelencia</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
                 Universidad De La Salle Bajío (2020-2024), León Gto. Reconocimiento al alto rendimiento académico durante toda la carrera universitaria.
               </p>
             </div>
-            <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800 text-xs font-semibold text-stone-500 flex items-center justify-between">
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-semibold text-slate-500 flex items-center justify-between">
               <span>León, Guanajuato</span>
-              <span class="text-brand-700 dark:text-brand-300 font-bold">2020 - 2024</span>
+              <span class="text-brand-600 dark:text-brand-400 font-bold">2020 - 2024</span>
             </div>
           </div>
 
           <!-- Bento 4: Migración Tenant Toyota Tsusho (2 columnas) -->
-          <div class="md:col-span-2 bg-white dark:bg-stone-900 p-6 sm:p-8 rounded-3xl border border-stone-200 dark:border-stone-800 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-brand-500/50 transition-all shadow-sm">
+          <div class="md:col-span-2 bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-brand-500/50 transition-all shadow-sm">
             <div class="max-w-xl">
               <div class="flex items-center gap-2">
-                <span class="px-2.5 py-1 rounded-md bg-stone-100 dark:bg-stone-800 text-[#43270a] dark:text-brand-200 text-xs font-bold border border-stone-200 dark:border-stone-700">
+                <span class="px-2.5 py-1 rounded-md bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300 text-xs font-bold border border-brand-200 dark:border-brand-800">
                   Toyota Tsusho México
                 </span>
-                <span class="text-xs text-stone-400">• Puerto Interior</span>
+                <span class="text-xs text-slate-400">• Puerto Interior</span>
               </div>
-              <h3 class="font-bold text-xl text-stone-900 dark:text-white mt-3">
+              <h3 class="font-bold text-xl text-slate-900 dark:text-white mt-3">
                 Migración Integral a Nuevo Tenant Corporativo
               </h3>
-              <p class="mt-2 text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 Contribución clave en la orquestación y migración de flujos, aplicaciones de Power Platform y datos corporativos al nuevo tenant de todo Toyota Tsusho México, asegurando continuidad operativa sin fricciones.
               </p>
             </div>
             <div class="shrink-0 flex items-center gap-3">
-              <span class="p-3 rounded-2xl bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 flex items-center gap-2 text-xs font-semibold border border-stone-200/60 dark:border-stone-700">
+              <span class="p-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center gap-2 text-xs font-semibold border border-slate-200/60 dark:border-slate-700">
                 <i data-lucide="server" class="w-4 h-4 text-brand-600"></i>
                 <span>100% Completada</span>
               </span>
@@ -403,45 +389,45 @@
     </section>
 
     <!-- TRAYECTORIA LABORAL (TIMELINE) -->
-    <section id="trayectoria" class="py-20 bg-stone-100/60 dark:bg-stone-900/40 border-y border-stone-200/60 dark:border-stone-800/60">
+    <section id="trayectoria" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
         <div class="max-w-3xl mb-14">
-          <p class="text-xs uppercase font-bold tracking-widest text-brand-700 dark:text-brand-300">Mi Carrera</p>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-white mt-2">
+          <p class="text-xs uppercase font-bold tracking-widest text-brand-600 dark:text-brand-400">Mi Carrera</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
             Trayectoria y experiencia laboral
           </h2>
-          <p class="mt-3 text-stone-600 dark:text-stone-400 text-sm">
+          <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm">
             Evolución profesional desde el desarrollo interactivo hasta la automatización e inteligencia artificial empresarial.
           </p>
         </div>
 
         <!-- Timeline Steps -->
-        <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:-translate-x-1/2 before:w-0.5 before:bg-stone-200 dark:before:bg-stone-800">
+        <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:-translate-x-1/2 before:w-0.5 before:bg-slate-200 dark:before:bg-slate-800">
           
           <!-- Item 1: Toyota Tsusho México -->
           <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
             <div class="w-full md:w-1/2 md:text-right md:pr-10">
-              <span class="inline-block px-3 py-1 rounded-full bg-brand-100 dark:bg-brand-950 text-brand-800 dark:text-brand-200 text-xs font-bold mb-2 border border-brand-200 dark:border-brand-900">
+              <span class="inline-block px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300 text-xs font-bold mb-2 border border-brand-200 dark:border-brand-900">
                 Julio 2026 – Presente
               </span>
-              <h3 class="text-xl font-bold text-stone-900 dark:text-white">Toyota Tsusho México</h3>
-              <p class="text-sm font-semibold text-brand-700 dark:text-brand-300">Equipo de Innovación Digital con Power Platform</p>
-              <p class="mt-2 text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Toyota Tsusho México</h3>
+              <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Equipo de Innovación Digital con Power Platform</p>
+              <p class="mt-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 Ubicado en Puerto Interior, Silao/León Gto. Liderando la automatización de procesos internos, desarrollo de aplicaciones para diversas áreas de la compañía y la exitosa migración del nuevo tenant corporativo.
               </p>
             </div>
 
-            <!-- Central Node in #43270a -->
-            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-[#43270a] text-white flex items-center justify-center text-xs font-bold shadow-lg ring-4 ring-white dark:ring-stone-950 z-10">
+            <!-- Central Node in Blue -->
+            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-brand-600 text-white flex items-center justify-center text-xs font-bold shadow-lg ring-4 ring-white dark:ring-slate-950 z-10">
               <i data-lucide="zap" class="w-4 h-4 text-amber-300"></i>
             </div>
 
             <div class="w-full md:w-1/2 pl-12 md:pl-10">
               <div class="flex flex-wrap gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300">Power Platform</span>
-                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300">Tenant Migration</span>
-                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300">Power Automate</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">Power Platform</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">Tenant Migration</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">Power Automate</span>
               </div>
             </div>
           </div>
@@ -450,24 +436,24 @@
           <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
             <div class="w-full md:w-1/2 md:text-right md:pr-10 order-1 md:order-1">
               <div class="hidden md:flex flex-wrap justify-end gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300">Copilot Studio</span>
-                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300">Dynamics 365</span>
-                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300">Dataverse</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">Copilot Studio</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">Dynamics 365</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">Dataverse</span>
               </div>
             </div>
 
-            <!-- Central Node in Coffee Tone -->
-            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-[#784820] text-white flex items-center justify-center text-xs font-bold shadow-lg ring-4 ring-white dark:ring-stone-950 z-10">
-              <i data-lucide="code" class="w-4 h-4 text-amber-200"></i>
+            <!-- Central Node in Slate/Blue -->
+            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-slate-800 dark:bg-slate-700 text-white flex items-center justify-center text-xs font-bold shadow-lg ring-4 ring-white dark:ring-slate-950 z-10">
+              <i data-lucide="code" class="w-4 h-4 text-sky-300"></i>
             </div>
 
             <div class="w-full md:w-1/2 pl-12 md:pl-10 order-2 md:order-2">
-              <span class="inline-block px-3 py-1 rounded-full bg-stone-200/80 dark:bg-stone-800 text-stone-800 dark:text-stone-200 text-xs font-bold mb-2">
+              <span class="inline-block px-3 py-1 rounded-full bg-slate-200/80 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-bold mb-2">
                 Julio 2024 – Julio 2026
               </span>
-              <h3 class="text-xl font-bold text-stone-900 dark:text-white">AlgoritmoIT</h3>
-              <p class="text-sm font-semibold text-brand-700 dark:text-brand-300">Especialista en Power Platform & Dynamics 365</p>
-              <p class="mt-2 text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">AlgoritmoIT</h3>
+              <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Especialista en Power Platform & Dynamics 365</p>
+              <p class="mt-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 Consultoría y desarrollo para marcas de gran escala: Tiendas CUADRA, HDI Seguros, SAAM Towage y Reyma. Creación de agentes de IA y obtención de las certificaciones oficiales PL-900 y PL-400.
               </p>
             </div>
@@ -476,26 +462,26 @@
           <!-- Item 3: Colektor -->
           <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
             <div class="w-full md:w-1/2 md:text-right md:pr-10">
-              <span class="inline-block px-3 py-1 rounded-full bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-bold mb-2">
+              <span class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold mb-2">
                 Prácticas Profesionales (2023 - 2024)
               </span>
-              <h3 class="text-xl font-bold text-stone-900 dark:text-white">Colektor</h3>
-              <p class="text-sm font-semibold text-brand-700 dark:text-brand-300">Desarrollador Unity (2D, AR & VR)</p>
-              <p class="mt-2 text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white">Colektor</h3>
+              <p class="text-sm font-semibold text-brand-600 dark:text-brand-400">Desarrollador Unity (2D, AR & VR)</p>
+              <p class="mt-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 Creación de múltiples interactivos 2D y experiencias inmersivas con Realidad Aumentada y Realidad Virtual, afianzando bases sólidas de programación orientada a objetos, diseño de interfaces y lógica interactiva.
               </p>
             </div>
 
             <!-- Central Node -->
-            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-stone-700 text-white flex items-center justify-center text-xs font-bold shadow-lg ring-4 ring-white dark:ring-stone-950 z-10">
-              <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+            <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-slate-700 text-white flex items-center justify-center text-xs font-bold shadow-lg ring-4 ring-white dark:ring-slate-950 z-10">
+              <i data-lucide="gamepad-2" class="w-4 h-4 text-sky-200"></i>
             </div>
 
             <div class="w-full md:w-1/2 pl-12 md:pl-10">
               <div class="flex flex-wrap gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300">Unity 3D/2D</span>
-                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300">Realidad Aumentada</span>
-                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-700 dark:text-stone-300">Realidad Virtual</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">Unity 3D/2D</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">Realidad Aumentada</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">Realidad Virtual</span>
               </div>
             </div>
           </div>
@@ -511,12 +497,12 @@
         
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
-            <p class="text-xs uppercase font-bold tracking-widest text-brand-700 dark:text-brand-300">Portafolio</p>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-white mt-2">
+            <p class="text-xs uppercase font-bold tracking-widest text-brand-600 dark:text-brand-400">Portafolio</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
               Proyectos reales & soluciones construidas
             </h2>
           </div>
-          <p class="text-sm text-stone-500 dark:text-stone-400 max-w-sm">
+          <p class="text-sm text-slate-500 dark:text-slate-400 max-w-sm">
             Soluciones aplicadas en retail, aseguradoras, manufactura internacional e interactividad.
           </p>
         </div>
@@ -525,35 +511,35 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           <!-- Proyecto 1: Agente IA CUADRA -->
-          <article class="bg-white dark:bg-stone-900 rounded-3xl border border-stone-200 dark:border-stone-800 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl">
-            <div class="aspect-video w-full overflow-hidden bg-stone-900 relative">
+          <article class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl">
+            <div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
               <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=700&q=80" alt="Agente de IA Tiendas Cuadra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#43270a] text-white text-[10px] font-bold tracking-wide shadow-md">
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-brand-600 text-white text-[10px] font-bold tracking-wide shadow-md">
                 Copilot Studio
               </span>
             </div>
             
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <span class="text-xs font-mono text-brand-700 dark:text-brand-300 font-semibold">Destacado por Microsoft CAT</span>
-                <h3 class="font-bold text-xl text-stone-900 dark:text-white mt-1 group-hover:text-brand-700 dark:group-hover:text-brand-300 transition-colors">
+                <span class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">Destacado por Microsoft CAT</span>
+                <h3 class="font-bold text-xl text-slate-900 dark:text-white mt-1 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                   Agente de IA para Tiendas CUADRA
                 </h3>
-                <p class="mt-2 text-sm text-stone-600 dark:text-stone-400 line-clamp-3">
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
                   Agente conversacional inteligente que asiste a usuarios en consultas de productos, catálogos y atención al cliente, integrando Dataverse y flujos automatizados.
                 </p>
                 <div class="mt-4 flex flex-wrap gap-1.5">
-                  <span class="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-[11px] font-medium text-stone-600 dark:text-stone-300">Copilot Studio</span>
-                  <span class="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-[11px] font-medium text-stone-600 dark:text-stone-300">Power Automate</span>
-                  <span class="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-[11px] font-medium text-stone-600 dark:text-stone-300">Dataverse</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-600 dark:text-slate-300">Copilot Studio</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-600 dark:text-slate-300">Power Automate</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-600 dark:text-slate-300">Dataverse</span>
                 </div>
               </div>
 
-              <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs font-semibold">
-                <span class="text-brand-700 dark:text-brand-300 flex items-center gap-1">
+              <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold">
+                <span class="text-brand-600 dark:text-brand-400 flex items-center gap-1">
                   <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Presentado en Webinar
                 </span>
-                <a href="#contacto" class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200">
+                <a href="#contacto" class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200">
                   Consultar detalles
                 </a>
               </div>
@@ -561,63 +547,63 @@
           </article>
 
           <!-- Proyecto 2: Agentes & Automatización HDI y Reyma -->
-          <article class="bg-white dark:bg-stone-900 rounded-3xl border border-stone-200 dark:border-stone-800 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl">
-            <div class="aspect-video w-full overflow-hidden bg-stone-900 relative">
+          <article class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl">
+            <div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Automatizaciones empresariales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-stone-900/80 backdrop-blur-md text-white text-[10px] font-bold tracking-wide">
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold tracking-wide">
                 Power Platform & Dynamics
               </span>
             </div>
             
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <span class="text-xs font-mono text-stone-600 dark:text-stone-400 font-semibold">Corporativo & Seguros</span>
-                <h3 class="font-bold text-xl text-stone-900 dark:text-white mt-1 group-hover:text-brand-700 dark:group-hover:text-brand-300 transition-colors">
+                <span class="text-xs font-mono text-slate-600 dark:text-slate-400 font-semibold">Corporativo & Seguros</span>
+                <h3 class="font-bold text-xl text-slate-900 dark:text-white mt-1 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                   Soluciones para HDI, Reyma & SAAM
                 </h3>
-                <p class="mt-2 text-sm text-stone-600 dark:text-stone-400 line-clamp-3">
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
                   Implementación de agentes de IA y digitalización de flujos de trabajo en Dynamics 365 y Power Apps para optimizar la gestión de siniestros, procesos internos y logística.
                 </p>
                 <div class="mt-4 flex flex-wrap gap-1.5">
-                  <span class="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-[11px] font-medium text-stone-600 dark:text-stone-300">Dynamics 365</span>
-                  <span class="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-[11px] font-medium text-stone-600 dark:text-stone-300">Power Apps</span>
-                  <span class="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-[11px] font-medium text-stone-600 dark:text-stone-300">IA Agents</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-600 dark:text-slate-300">Dynamics 365</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-600 dark:text-slate-300">Power Apps</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-600 dark:text-slate-300">IA Agents</span>
                 </div>
               </div>
 
-              <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs font-semibold">
-                <span class="text-stone-500">AlgoritmoIT Client Suite</span>
+              <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold">
+                <span class="text-slate-500">AlgoritmoIT Client Suite</span>
               </div>
             </div>
           </article>
 
           <!-- Proyecto 3: Interactivos Unity AR & VR -->
-          <article class="bg-white dark:bg-stone-900 rounded-3xl border border-stone-200 dark:border-stone-800 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl">
-            <div class="aspect-video w-full overflow-hidden bg-stone-900 relative">
+          <article class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl">
+            <div class="aspect-video w-full overflow-hidden bg-slate-900 relative">
               <img src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=700&q=80" alt="Experiencias inmersivas Unity" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-stone-900/80 backdrop-blur-md text-white text-[10px] font-bold tracking-wide">
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold tracking-wide">
                 Unity AR / VR
               </span>
             </div>
             
             <div class="p-6 flex-1 flex flex-col justify-between">
               <div>
-                <span class="text-xs font-mono text-stone-600 dark:text-stone-400 font-semibold">Colektor Studios</span>
-                <h3 class="font-bold text-xl text-stone-900 dark:text-white mt-1 group-hover:text-brand-700 dark:group-hover:text-brand-300 transition-colors">
+                <span class="text-xs font-mono text-slate-600 dark:text-slate-400 font-semibold">Colektor Studios</span>
+                <h3 class="font-bold text-xl text-slate-900 dark:text-white mt-1 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                   Interactivos 2D, Realidad Aumentada & VR
                 </h3>
-                <p class="mt-2 text-sm text-stone-600 dark:text-stone-400 line-clamp-3">
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
                   Desarrollo de experiencias inmersivas y lúdicas utilizando Unity. Integración de tracking de realidad aumentada e interacción en entornos virtuales para usuarios finales.
                 </p>
                 <div class="mt-4 flex flex-wrap gap-1.5">
-                  <span class="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-[11px] font-medium text-stone-600 dark:text-stone-300">Unity 3D</span>
-                  <span class="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-[11px] font-medium text-stone-600 dark:text-stone-300">C#</span>
-                  <span class="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-[11px] font-medium text-stone-600 dark:text-stone-300">AR Foundation</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-600 dark:text-slate-300">Unity 3D</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-600 dark:text-slate-300">C#</span>
+                  <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-medium text-slate-600 dark:text-slate-300">AR Foundation</span>
                 </div>
               </div>
 
-              <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs font-semibold">
-                <span class="text-stone-500">Etapa Colektor</span>
+              <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-semibold">
+                <span class="text-slate-500">Etapa Colektor</span>
               </div>
             </div>
           </article>
@@ -628,15 +614,15 @@
     </section>
 
     <!-- HOBBIES & PASIONES (EL LADO HUMANO) -->
-    <section id="hobbies" class="py-20 bg-stone-100/60 dark:bg-stone-900/40 border-y border-stone-200/60 dark:border-stone-800/60">
+    <section id="hobbies" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         
         <div class="max-w-3xl mb-12">
-          <p class="text-xs uppercase font-bold tracking-widest text-brand-700 dark:text-brand-300">Fuera de la oficina</p>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-white mt-2">
+          <p class="text-xs uppercase font-bold tracking-widest text-brand-600 dark:text-brand-400">Fuera de la oficina</p>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
             Hobbies, pasiones y lo que me mantiene enfocado
           </h2>
-          <p class="mt-3 text-stone-600 dark:text-stone-400 text-sm">
+          <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm">
             El equilibrio entre el código y la vida: las actividades que nutren mi creatividad, disciplina y energía.
           </p>
         </div>
@@ -644,59 +630,59 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- Hobby 1: Fotografía -->
-          <div class="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 flex flex-col justify-between hover:border-brand-500/40 transition-all shadow-sm group">
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/40 transition-all shadow-sm group">
             <div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-brand-950/60 text-amber-800 dark:text-amber-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div class="w-12 h-12 rounded-2xl bg-rose-50 dark:bg-rose-950/60 text-rose-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <i data-lucide="camera" class="w-6 h-6"></i>
               </div>
-              <h3 class="font-bold text-lg text-stone-900 dark:text-white">Fotografía</h3>
-              <p class="mt-2 text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white">Fotografía</h3>
+              <p class="mt-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 Capturar instantes, juegos de luz, perspectivas urbanas y naturaleza. Me apasiona entrenar el ojo visual y la composición estética.
               </p>
             </div>
-            <p class="mt-6 text-[11px] font-semibold text-brand-700 dark:text-brand-300">Perspectiva & Composición 📸</p>
+            <p class="mt-6 text-[11px] font-semibold text-rose-500">Perspectiva & Composición 📸</p>
           </div>
 
           <!-- Hobby 2: Gimnasio & Fitness -->
-          <div class="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 flex flex-col justify-between hover:border-brand-500/40 transition-all shadow-sm group">
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/40 transition-all shadow-sm group">
             <div>
-              <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-950/80 text-brand-700 dark:text-brand-300 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-950/80 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <i data-lucide="dumbbell" class="w-6 h-6"></i>
               </div>
-              <h3 class="font-bold text-lg text-stone-900 dark:text-white">Ir al Gym</h3>
-              <p class="mt-2 text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white">Ir al Gym</h3>
+              <p class="mt-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 Entrenamiento de fuerza y disciplina diaria. El gimnasio es mi espacio para romper límites, desestresarme y fortalecer la constancia mental.
               </p>
             </div>
-            <p class="mt-6 text-[11px] font-semibold text-brand-700 dark:text-brand-300">Fuerza & Disciplina 💪</p>
+            <p class="mt-6 text-[11px] font-semibold text-brand-600 dark:text-brand-400">Fuerza & Disciplina 💪</p>
           </div>
 
           <!-- Hobby 3: Tecnología & Novedades -->
-          <div class="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 flex flex-col justify-between hover:border-brand-500/40 transition-all shadow-sm group">
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/40 transition-all shadow-sm group">
             <div>
-              <div class="w-12 h-12 rounded-2xl bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div class="w-12 h-12 rounded-2xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <i data-lucide="cpu" class="w-6 h-6"></i>
               </div>
-              <h3 class="font-bold text-lg text-stone-900 dark:text-white">Tecnología & IA</h3>
-              <p class="mt-2 text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white">Tecnología & IA</h3>
+              <p class="mt-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 Curiosidad incansable por probar nuevas herramientas, novedades de Microsoft, avances en agentes autónomos, gadgets y tendencias tech.
               </p>
             </div>
-            <p class="mt-6 text-[11px] font-semibold text-brand-700 dark:text-brand-300">Curiosidad Tech & Agentes ⚡</p>
+            <p class="mt-6 text-[11px] font-semibold text-sky-600 dark:text-sky-400">Curiosidad Tech & Agentes ⚡</p>
           </div>
 
           <!-- Hobby 4: Videojuegos -->
-          <div class="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 flex flex-col justify-between hover:border-brand-500/40 transition-all shadow-sm group">
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/40 transition-all shadow-sm group">
             <div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-50/60 dark:bg-stone-800 text-amber-800 dark:text-amber-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <i data-lucide="gamepad-2" class="w-6 h-6"></i>
               </div>
-              <h3 class="font-bold text-lg text-stone-900 dark:text-white">Videojuegos</h3>
-              <p class="mt-2 text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white">Videojuegos</h3>
+              <p class="mt-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 Apreciación del diseño interactivo, mecánicas, mundos abiertos y narrativas. Fue precisamente la chispa que me llevó a desarrollar en Unity.
               </p>
             </div>
-            <p class="mt-6 text-[11px] font-semibold text-brand-700 dark:text-brand-300">Gaming & Narrativa 🎮</p>
+            <p class="mt-6 text-[11px] font-semibold text-indigo-600 dark:text-indigo-400">Gaming & Narrativa 🎮</p>
           </div>
 
         </div>
@@ -710,12 +696,12 @@
         
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
-            <p class="text-xs uppercase font-bold tracking-widest text-brand-700 dark:text-brand-300">Escritos & Experiencias</p>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-white mt-2">
+            <p class="text-xs uppercase font-bold tracking-widest text-brand-600 dark:text-brand-400">Escritos & Experiencias</p>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">
               Artículos & reflexiones del blog
             </h2>
           </div>
-          <a href="./blog.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-800 dark:text-brand-300 hover:underline">
+          <a href="./blog.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline">
             <span>Ver catálogo completo</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
@@ -724,66 +710,66 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <!-- Post 1 (Real story) -->
-          <article class="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 flex flex-col justify-between hover:border-brand-500/50 transition-all shadow-sm">
+          <article class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/50 transition-all shadow-sm">
             <div>
-              <div class="flex items-center justify-between text-xs text-stone-400 mb-3">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
                 <span class="px-2 py-0.5 rounded-md bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300 font-bold border border-brand-200/50 dark:border-brand-800">Agentes IA</span>
                 <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 6 min</span>
               </div>
-              <h3 class="font-bold text-lg text-stone-900 dark:text-white hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                 <a href="./agente-cuadra.html">Cómo creamos el Agente de IA para Tiendas CUADRA que llegó al webinar de Microsoft CAT</a>
               </h3>
-              <p class="mt-3 text-sm text-stone-600 dark:text-stone-400 line-clamp-3">
+              <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
                 El detrás de escena del desarrollo con Copilot Studio: arquitectura, conexión a datos en tiempo real y cómo preparamos la ponencia para Microsoft.
               </p>
             </div>
-            <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
-              <span class="text-xs font-medium text-stone-400">Microsoft Copilot</span>
-              <a href="./agente-cuadra.html" class="text-xs font-semibold text-brand-800 dark:text-brand-300 hover:underline flex items-center gap-1">
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs font-medium text-slate-400">Microsoft Copilot</span>
+              <a href="./agente-cuadra.html" class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
                 Leer artículo <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
               </a>
             </div>
           </article>
 
           <!-- Post 2 -->
-          <article class="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 flex flex-col justify-between hover:border-brand-500/50 transition-all shadow-sm">
+          <article class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/50 transition-all shadow-sm">
             <div>
-              <div class="flex items-center justify-between text-xs text-stone-400 mb-3">
-                <span class="px-2 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 font-bold">Certificaciones</span>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold">Certificaciones</span>
                 <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 5 min</span>
               </div>
-              <h3 class="font-bold text-lg text-stone-900 dark:text-white hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
-                <a href="./pl-certifications.html">Ruta para certificar el PL-900 y PL-400: Lo que realmente evalúa Microsoft</a>
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                <a href="./ruta-certificacion-pl400.html">Ruta para certificar el PL-900 y PL-400: Lo que realmente evalúa Microsoft</a>
               </h3>
-              <p class="mt-3 text-sm text-stone-600 dark:text-stone-400 line-clamp-3">
+              <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
                 Consejos prácticos, recursos clave y conceptos de Dataverse y flujos que necesitas dominar para acreditarte como desarrollador en Power Platform.
               </p>
             </div>
-            <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
-              <span class="text-xs font-medium text-stone-400">Power Platform</span>
-              <a href="./pl-certifications.html" class="text-xs font-semibold text-brand-800 dark:text-brand-300 hover:underline flex items-center gap-1">
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs font-medium text-slate-400">Power Platform</span>
+              <a href="./ruta-certificacion-pl400.html" class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
                 Leer artículo <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
               </a>
             </div>
           </article>
 
           <!-- Post 3 -->
-          <article class="bg-white dark:bg-stone-900 p-6 rounded-3xl border border-stone-200 dark:border-stone-800 flex flex-col justify-between hover:border-brand-500/50 transition-all shadow-sm">
+          <article class="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500/50 transition-all shadow-sm">
             <div>
-              <div class="flex items-center justify-between text-xs text-stone-400 mb-3">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
                 <span class="px-2 py-0.5 rounded-md bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300 font-bold border border-brand-200/50 dark:border-brand-800">Empresas</span>
                 <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 7 min</span>
               </div>
-              <h3 class="font-bold text-lg text-stone-900 dark:text-white hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
-                <a href="./migracion.html">Migración masiva de Tenant en organizaciones globales: La experiencia en Toyota Tsusho</a>
+              <h3 class="font-bold text-lg text-slate-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                <a href="./migracion-tenant.html">Migración masiva de Tenant en organizaciones globales: La experiencia en Toyota Tsusho</a>
               </h3>
-              <p class="mt-3 text-sm text-stone-600 dark:text-stone-400 line-clamp-3">
+              <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 line-clamp-3">
                 Estrategias para migrar entornos de Power Platform, reasignar conexiones y garantizar que las operaciones corporativas no se detengan ni un segundo.
               </p>
             </div>
-            <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
-              <span class="text-xs font-medium text-stone-400">Transformación Digital</span>
-              <a href="./migracion.html" class="text-xs font-semibold text-brand-800 dark:text-brand-300 hover:underline flex items-center gap-1">
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+              <span class="text-xs font-medium text-slate-400">Transformación Digital</span>
+              <a href="./migracion-tenant.html" class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
                 Leer artículo <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
               </a>
             </div>
@@ -795,30 +781,30 @@
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="py-24 bg-stone-100/60 dark:bg-stone-900/40 border-t border-stone-200/60 dark:border-stone-800/60">
+    <section id="contacto" class="py-24 bg-slate-100/70 dark:bg-slate-900/40 border-t border-slate-200/60 dark:border-slate-800/60">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         
-        <div class="inline-flex items-center justify-center w-14 h-14 rounded-3xl bg-brand-100 dark:bg-brand-950/90 text-brand-800 dark:text-brand-300 mb-6 shadow-sm border border-brand-200 dark:border-brand-800">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-3xl bg-brand-50 dark:bg-brand-950/90 text-brand-600 dark:text-brand-400 mb-6 shadow-sm border border-brand-200 dark:border-brand-800">
           <i data-lucide="mail" class="w-7 h-7"></i>
         </div>
 
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 dark:text-white tracking-tight">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           ¿Hablamos de innovación, Power Platform o Agentes de IA?
         </h2>
-        <p class="mt-4 text-base sm:text-lg text-stone-600 dark:text-stone-400 max-w-xl mx-auto">
+        <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
           Siempre entusiasmado por intercambiar ideas sobre automatización, casos de uso de IA generativa o nuevas oportunidades de impacto.
         </p>
 
         <!-- Email copy widget -->
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <div class="flex items-center gap-2 px-4 py-3 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-sm font-mono text-stone-700 dark:text-stone-200 shadow-sm w-full sm:w-auto">
+          <div class="flex items-center gap-2 px-4 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm font-mono text-slate-700 dark:text-slate-200 shadow-sm w-full sm:w-auto">
             <span id="contact-email">penanavarromanuel85@gmail.com</span>
-            <button id="copy-email-btn" title="Copiar al portapapeles" class="ml-2 p-1.5 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-500 hover:text-brand-700 transition-colors">
+            <button id="copy-email-btn" title="Copiar al portapapeles" class="ml-2 p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 hover:text-brand-600 transition-colors">
               <i data-lucide="copy" class="w-4 h-4"></i>
             </button>
           </div>
 
-          <a href="mailto:penanavarromanuel85@gmail.com" class="w-full sm:w-auto px-6 py-3 rounded-2xl bg-[#43270a] hover:bg-[#593414] text-white font-semibold text-sm shadow-lg shadow-[#43270a]/20 transition-all flex items-center justify-center gap-2">
+          <a href="mailto:penanavarromanuel85@gmail.com" class="w-full sm:w-auto px-6 py-3 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg shadow-brand-600/25 transition-all flex items-center justify-center gap-2">
             <span>Escribirme directamente</span>
             <i data-lucide="send" class="w-4 h-4"></i>
           </a>
@@ -826,13 +812,13 @@
 
         <!-- Social Icons -->
         <div class="mt-12 flex items-center justify-center gap-4">
-          <a href="https://www.linkedin.com/in/manuel-pena-navarro-129573287/" target="_blank" aria-label="LinkedIn" class="p-3.5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:text-brand-800 dark:hover:text-brand-300 hover:border-brand-500 transition-all shadow-sm">
+          <a href="https://www.linkedin.com/in/manuel-pena-navarro-129573287/" target="_blank" aria-label="LinkedIn" class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-600 hover:border-brand-500 transition-all shadow-sm">
             <i data-lucide="linkedin" class="w-5 h-5"></i>
           </a>
-          <a href="https://github.com/MPN69" target="_blank" aria-label="GitHub" class="p-3.5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:text-brand-800 dark:hover:text-brand-300 hover:border-brand-500 transition-all shadow-sm">
+          <a href="https://github.com/MPN69" target="_blank" aria-label="GitHub" class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-600 hover:border-brand-500 transition-all shadow-sm">
             <i data-lucide="github" class="w-5 h-5"></i>
           </a>
-          <a href="https://twitter.com" target="_blank" aria-label="Twitter / X" class="p-3.5 rounded-2xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:text-brand-800 dark:hover:text-brand-300 hover:border-brand-500 transition-all shadow-sm">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter / X" class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-brand-600 hover:border-brand-500 transition-all shadow-sm">
             <i data-lucide="twitter" class="w-5 h-5"></i>
           </a>
         </div>
@@ -843,11 +829,11 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 py-8 text-xs text-stone-500">
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-8 text-xs text-slate-500">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p>© <span id="current-year">2026</span> M. Peña. Todos los derechos reservados.</p>
       <p class="flex items-center gap-1.5">
-        <span>León / Puerto Interior, Guanajuato</span> • <span>Hecho con café, código y pasión</span>
+        <span>León / Puerto Interior, Guanajuato</span> • <span>Hecho con código limpio y pasión</span>
       </p>
     </div>
   </footer>

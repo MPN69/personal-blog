@@ -24,17 +24,17 @@
           },
           colors: {
             brand: {
-              50: '#fbf7f4',
-              100: '#f5ebe2',
-              200: '#edd8c6',
-              300: '#e0bda2',
-              400: '#c59570',
-              500: '#9b643a',
-              600: '#784820',
-              700: '#593414',
-              800: '#43270a', // Color café solicitado
-              900: '#321c07',
-              950: '#1b0d03',
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb', // Azul profesional corporativo
+              700: '#1d4ed8',
+              800: '#1e40af', // Azul marino profundo
+              900: '#1e3a8a',
+              950: '#0f172a',
             }
           }
         }
@@ -46,57 +46,57 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body class="bg-[#faf8f6] text-stone-800 dark:bg-[#12100e] dark:text-stone-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#faf8f6]/85 dark:bg-[#12100e]/85 border-b border-stone-200/80 dark:border-stone-800/80">
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-slate-950/85 border-b border-slate-200/80 dark:border-slate-800/80">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <a href="./index.html" class="flex items-center gap-2.5 group font-bold text-xl tracking-tight text-stone-900 dark:text-white">
-        <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#43270a] to-[#9b643a] flex items-center justify-center text-white text-sm font-black shadow-md shadow-[#43270a]/30 group-hover:scale-105 transition-transform">
+      <a href="./index.html" class="flex items-center gap-2.5 group font-bold text-xl tracking-tight text-slate-900 dark:text-white">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-700 to-sky-500 flex items-center justify-center text-white text-sm font-black shadow-md shadow-brand-600/30 group-hover:scale-105 transition-transform">
           MP
         </span>
         <span class="font-extrabold tracking-tight">M. Peña<span class="text-brand-600 dark:text-brand-400 font-semibold text-sm">.dev</span></span>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-stone-600 dark:text-stone-300">
-        <a href="./index.html#sobre-mi" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Sobre mí</a>
-        <a href="./index.html#logros" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Logros</a>
-        <a href="./index.html#trayectoria" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Trayectoria</a>
-        <a href="./index.html#proyectos" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Proyectos</a>
-        <a href="./index.html#hobbies" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Hobbies</a>
-        <a href="./blog.html" class="text-brand-800 dark:text-brand-300 font-bold transition-colors">Blog</a>
-        <a href="./index.html#contacto" class="hover:text-brand-800 dark:hover:text-brand-300 transition-colors">Contacto</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="./index.html#sobre-mi" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Sobre mí</a>
+        <a href="./index.html#logros" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Logros</a>
+        <a href="./index.html#trayectoria" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Trayectoria</a>
+        <a href="./index.html#proyectos" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Proyectos</a>
+        <a href="./index.html#hobbies" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Hobbies</a>
+        <a href="./blog.html" class="text-brand-600 dark:text-brand-400 font-bold transition-colors">Blog</a>
+        <a href="./index.html#contacto" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contacto</a>
       </nav>
 
       <!-- Right Action & Theme Toggle -->
       <div class="flex items-center gap-3">
-        <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro" class="p-2 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-900 transition-all">
+        <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 transition-all">
           <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
           <i data-lucide="sun" class="w-4 h-4 block dark:hidden"></i>
         </button>
 
-        <a href="./index.html#contacto" class="hidden sm:inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold px-4 py-2 rounded-xl bg-[#43270a] hover:bg-[#593414] text-white dark:bg-stone-100 dark:text-[#43270a] dark:hover:bg-white shadow-sm transition-all">
+        <a href="./index.html#contacto" class="hidden sm:inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:bg-brand-600 dark:hover:bg-brand-50 shadow-sm transition-all">
           <span>Hablemos</span>
           <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
         </a>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" aria-label="Abrir menú" class="md:hidden p-2 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300">
+        <button id="mobile-menu-btn" aria-label="Abrir menú" class="md:hidden p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">
           <i data-lucide="menu" class="w-5 h-5"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-stone-200 dark:border-stone-800 bg-[#faf8f6]/95 dark:bg-[#12100e]/95 px-6 py-4 space-y-3 text-sm font-medium">
-      <a href="./index.html#sobre-mi" class="block text-stone-700 dark:text-stone-200">Sobre mí</a>
-      <a href="./index.html#logros" class="block text-stone-700 dark:text-stone-200">Logros & Hitos</a>
-      <a href="./index.html#trayectoria" class="block text-stone-700 dark:text-stone-200">Trayectoria</a>
-      <a href="./index.html#proyectos" class="block text-stone-700 dark:text-stone-200">Proyectos</a>
-      <a href="./index.html#hobbies" class="block text-stone-700 dark:text-stone-200">Hobbies</a>
-      <a href="./blog.html" class="block text-brand-800 dark:text-brand-300 font-bold">Blog</a>
-      <a href="./index.html#contacto" class="block text-stone-700 dark:text-stone-200">Contacto</a>
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 px-6 py-4 space-y-3 text-sm font-medium">
+      <a href="./index.html#sobre-mi" class="block text-slate-700 dark:text-slate-200">Sobre mí</a>
+      <a href="./index.html#logros" class="block text-slate-700 dark:text-slate-200">Logros & Hitos</a>
+      <a href="./index.html#trayectoria" class="block text-slate-700 dark:text-slate-200">Trayectoria</a>
+      <a href="./index.html#proyectos" class="block text-slate-700 dark:text-slate-200">Proyectos</a>
+      <a href="./index.html#hobbies" class="block text-slate-700 dark:text-slate-200">Hobbies</a>
+      <a href="./blog.html" class="block text-brand-600 dark:text-brand-400 font-bold">Blog</a>
+      <a href="./index.html#contacto" class="block text-slate-700 dark:text-slate-200">Contacto</a>
     </div>
   </header>
 
@@ -105,33 +105,33 @@
       
       <!-- Header -->
       <div class="mb-12">
-        <a href="./index.html" class="inline-flex items-center gap-2 text-xs font-semibold text-stone-500 hover:text-brand-800 mb-6 transition-colors">
+        <a href="./index.html" class="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 hover:text-brand-600 mb-6 transition-colors">
           <i data-lucide="arrow-left" class="w-4 h-4"></i>
           <span>Volver al inicio</span>
         </a>
-        <h1 class="text-4xl sm:text-5xl font-black text-stone-900 dark:text-white tracking-tight">
+        <h1 class="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
           Blog & Notas Técnicas
         </h1>
-        <p class="mt-4 text-base sm:text-lg text-stone-600 dark:text-stone-400 max-w-2xl leading-relaxed">
+        <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
           Experiencias reales del día a día trabajando con Power Platform, desarrollo de agentes inteligentes en Copilot Studio, mejores prácticas de automatización y lecciones aprendidas en la industria.
         </p>
       </div>
 
       <!-- Categories Filter -->
-      <div class="flex flex-wrap gap-2 mb-10 pb-6 border-b border-stone-200 dark:border-stone-800">
-        <button class="category-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-[#43270a] text-white shadow-sm" data-category="all">
+      <div class="flex flex-wrap gap-2 mb-10 pb-6 border-b border-slate-200 dark:border-slate-800">
+        <button class="category-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-600 text-white shadow-sm" data-category="all">
           Todos los artículos
         </button>
-        <button class="category-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:border-brand-500" data-category="agentes-ia">
+        <button class="category-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-brand-500" data-category="agentes-ia">
           Agentes de IA
         </button>
-        <button class="category-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:border-brand-500" data-category="power-platform">
+        <button class="category-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-brand-500" data-category="power-platform">
           Power Platform & PL-400
         </button>
-        <button class="category-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:border-brand-500" data-category="innovacion">
+        <button class="category-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-brand-500" data-category="innovacion">
           Transformación Digital
         </button>
-        <button class="category-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:border-brand-500" data-category="carrera">
+        <button class="category-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-brand-500" data-category="carrera">
           Carrera & Aprendizaje
         </button>
       </div>
@@ -140,25 +140,25 @@
       <div class="space-y-8" id="blog-posts-container">
         
         <!-- Post 1 -->
-        <article class="post-item bg-white dark:bg-stone-900 p-6 sm:p-8 rounded-3xl border border-stone-200 dark:border-stone-800 hover:border-brand-500/50 transition-all shadow-sm" data-category="agentes-ia">
-          <div class="flex items-center gap-3 text-xs text-stone-400 mb-3">
-            <span class="px-2.5 py-0.5 rounded-md bg-brand-50 dark:bg-brand-950 text-brand-800 dark:text-brand-200 font-semibold border border-brand-200/60 dark:border-brand-800">Agentes de IA</span>
+        <article class="post-item bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all shadow-sm" data-category="agentes-ia">
+          <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+            <span class="px-2.5 py-0.5 rounded-md bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300 font-semibold border border-brand-200/60 dark:border-brand-800">Agentes de IA</span>
             <span>•</span>
             <span>15 de Noviembre, 2026</span>
             <span>•</span>
             <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 6 min de lectura</span>
           </div>
 
-          <h2 class="text-2xl font-bold text-stone-900 dark:text-white hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
-            <a href="./agente-cuadra.html">Cómo creamos el Agente de IA para Tiendas CUADRA que llegó al Webinar de Microsoft CAT</a>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+            <a href="./agente-cuadra.html">Cómo creamos el Agente de IA para Tiendas CUADRA que llegó al webinar de Microsoft CAT</a>
           </h2>
 
-          <p class="mt-3 text-stone-600 dark:text-stone-400 leading-relaxed text-sm sm:text-base">
+          <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base">
             El recorrido técnico y estratégico detrás del agente en Copilot Studio: integración con Dataverse, orquestación de respuestas con IA Generativa y las claves que captaron la atención del equipo mundial de Microsoft CAT.
           </p>
 
           <div class="mt-6 flex items-center justify-between">
-            <a href="./agente-cuadra.html" class="text-sm font-semibold text-brand-800 dark:text-brand-300 hover:underline flex items-center gap-1.5">
+            <a href="./agente-cuadra.html" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1.5">
               <span>Leer caso completo</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
@@ -166,25 +166,25 @@
         </article>
 
         <!-- Post 2 -->
-        <article class="post-item bg-white dark:bg-stone-900 p-6 sm:p-8 rounded-3xl border border-stone-200 dark:border-stone-800 hover:border-brand-500/50 transition-all shadow-sm" data-category="power-platform">
-          <div class="flex items-center gap-3 text-xs text-stone-400 mb-3">
-            <span class="px-2.5 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 font-semibold border border-stone-200 dark:border-stone-700">Power Platform & PL-400</span>
+        <article class="post-item bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all shadow-sm" data-category="power-platform">
+          <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold border border-slate-200 dark:border-slate-700">Power Platform & PL-400</span>
             <span>•</span>
             <span>02 de Noviembre, 2026</span>
             <span>•</span>
             <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 7 min de lectura</span>
           </div>
 
-          <h2 class="text-2xl font-bold text-stone-900 dark:text-white hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
-            <a href="./pl-certifications.html">Ruta para certificar el PL-900 y PL-400: Lo que realmente evalúa Microsoft</a>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+            <a href="./ruta-certificacion-pl400.html">Ruta para certificar el PL-900 y PL-400: Lo que realmente evalúa Microsoft</a>
           </h2>
 
-          <p class="mt-3 text-stone-600 dark:text-stone-400 leading-relaxed text-sm sm:text-base">
+          <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base">
             Una guía directa basada en mi experiencia certificándome en AlgoritmoIT: temas indispensables, trampas comunes en el examen de desarrollador y cómo poner en práctica la teoría con proyectos reales.
           </p>
 
           <div class="mt-6 flex items-center justify-between">
-            <a href="./pl-certifications.html" class="text-sm font-semibold text-brand-800 dark:text-brand-300 hover:underline flex items-center gap-1.5">
+            <a href="./ruta-certificacion-pl400.html" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1.5">
               <span>Leer artículo</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
@@ -192,25 +192,25 @@
         </article>
 
         <!-- Post 3 -->
-        <article class="post-item bg-white dark:bg-stone-900 p-6 sm:p-8 rounded-3xl border border-stone-200 dark:border-stone-800 hover:border-brand-500/50 transition-all shadow-sm" data-category="innovacion">
-          <div class="flex items-center gap-3 text-xs text-stone-400 mb-3">
-            <span class="px-2.5 py-0.5 rounded-md bg-brand-50 dark:bg-brand-950 text-brand-800 dark:text-brand-200 font-semibold border border-brand-200/60 dark:border-brand-800">Transformación Digital</span>
+        <article class="post-item bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all shadow-sm" data-category="innovacion">
+          <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+            <span class="px-2.5 py-0.5 rounded-md bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300 font-semibold border border-brand-200/60 dark:border-brand-800">Transformación Digital</span>
             <span>•</span>
             <span>20 de Octubre, 2026</span>
             <span>•</span>
             <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 8 min de lectura</span>
           </div>
 
-          <h2 class="text-2xl font-bold text-stone-900 dark:text-white hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
-            <a href="./migracion.html">Migración masiva de Tenant en organizaciones globales: La experiencia en Toyota Tsusho</a>
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+            <a href="./migracion-tenant.html">Migración masiva de Tenant en organizaciones globales: La experiencia en Toyota Tsusho</a>
           </h2>
 
-          <p class="mt-3 text-stone-600 dark:text-stone-400 leading-relaxed text-sm sm:text-base">
+          <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base">
             Los retos técnicos de mover flujos corporativos, soluciones empaquetadas y entornos de Power Platform en una empresa multinacional sin impactar las líneas de operación en Puerto Interior.
           </p>
 
           <div class="mt-6 flex items-center justify-between">
-            <a href="./migracion.html" class="text-sm font-semibold text-brand-800 dark:text-brand-300 hover:underline flex items-center gap-1.5">
+            <a href="./migracion-tenant.html" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1.5">
               <span>Leer artículo</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
@@ -218,25 +218,25 @@
         </article>
 
         <!-- Post 4 -->
-        <article class="post-item bg-white dark:bg-stone-900 p-6 sm:p-8 rounded-3xl border border-stone-200 dark:border-stone-800 hover:border-brand-500/50 transition-all shadow-sm" data-category="carrera">
-          <div class="flex items-center gap-3 text-xs text-stone-400 mb-3">
-            <span class="px-2.5 py-0.5 rounded-md bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 font-semibold border border-stone-200 dark:border-stone-700">Carrera & Aprendizaje</span>
+        <article class="post-item bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-brand-500/50 transition-all shadow-sm" data-category="carrera">
+          <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
+            <span class="px-2.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold border border-slate-200 dark:border-slate-700">Carrera & Aprendizaje</span>
             <span>•</span>
             <span>05 de Octubre, 2026</span>
             <span>•</span>
             <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 6 min de lectura</span>
           </div>
 
-          <h2 class="text-2xl font-bold text-stone-900 dark:text-white hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
             <a href="./unity-powerplatform.html">De Unity a la Power Platform: Cómo los videojuegos forjaron mi mente analítica</a>
           </h2>
 
-          <p class="mt-3 text-stone-600 dark:text-stone-400 leading-relaxed text-sm sm:text-base">
+          <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed text-sm sm:text-base">
             Cómo desarrollar interactivos 2D, realidad aumentada y VR en Colektor me enseñó a pensar en experiencia de usuario, optimización de recursos y lógica que hoy aplico en automatizaciones complejas.
           </p>
 
           <div class="mt-6 flex items-center justify-between">
-            <a href="./unity-powerplatform.html" class="text-sm font-semibold text-brand-800 dark:text-brand-300 hover:underline flex items-center gap-1.5">
+            <a href="./unity-powerplatform.html" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1.5">
               <span>Leer artículo</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
@@ -249,10 +249,10 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 py-8 text-xs text-stone-500">
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-8 text-xs text-slate-500">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p>© <span id="current-year">2026</span> M. Peña. Todos los derechos reservados.</p>
-      <a href="./index.html" class="text-brand-700 dark:text-brand-300 hover:underline">Volver a la portada</a>
+      <a href="./index.html" class="text-brand-600 dark:text-brand-400 hover:underline">Volver a la portada</a>
     </div>
   </footer>
 
