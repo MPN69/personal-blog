@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruta para certificar el PL-900 y PL-400: Lo que realmente evalúa Microsoft | Blog M. Peña</title>
+  <meta name="description"
+    content="Guía práctica basada en mi experiencia certificándome en PL-900 y PL-400 en AlgoritmoIT: temas clave, trampas comunes del examen y aplicación en proyectos reales.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fbf7f4',
+              100: '#f5ebe2',
+              200: '#edd8c6',
+              300: '#e0bda2',
+              400: '#c59570',
+              500: '#9b643a',
+              600: '#784820',
+              700: '#593414',
+              800: '#43270a',
+              900: '#321c07',
+              950: '#1b0d03',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body
+  class="bg-[#faf8f6] text-stone-800 dark:bg-[#12100e] dark:text-stone-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
+
+  <!-- Navbar -->
+  <header
+    class="sticky top-0 z-50 backdrop-blur-md bg-[#faf8f6]/85 dark:bg-[#12100e]/85 border-b border-stone-200/80 dark:border-stone-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="./blog.html"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-stone-600 dark:text-stone-300 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Volver a artículos</span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro"
+          class="p-2 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-900 transition-all">
+          <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+          <i data-lucide="sun" class="w-4 h-4 block dark:hidden"></i>
+        </button>
+
+        <a href="./index.html"
+          class="p-2 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-900 transition-all"
+          title="Ir a la portada">
+          <i data-lucide="home" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <main class="flex-1 py-12 md:py-20">
+    <article class="max-w-3xl mx-auto px-4 sm:px-6">
+
+      <!-- Post Meta Header -->
+      <header class="mb-10 text-center">
+        <div
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 dark:bg-brand-950 border border-brand-200 dark:border-brand-800 text-brand-800 dark:text-brand-200 text-xs font-semibold mb-4">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          Guía de Certificación • Power Platform
+        </div>
+
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-stone-900 dark:text-white tracking-tight leading-[1.18]">
+          Ruta para certificar el PL-900 y PL-400: Lo que realmente evalúa Microsoft
+        </h1>
+
+        <p class="mt-4 text-base sm:text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
+          Una guía directa basada en mi experiencia certificándome en AlgoritmoIT: temas indispensables, trampas comunes
+          en el examen de desarrollador y cómo llevar la teoría a producción.
+        </p>
+
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-stone-500 dark:text-stone-400">
+          <div class="flex items-center gap-2">
+            <img src="https://i.postimg.cc/g0K2qVDJ/profile-img.webp" alt="M. Peña"
+              class="w-7 h-7 rounded-full object-cover">
+            <span class="font-semibold text-stone-800 dark:text-stone-200">Manuel Peña (M. Peña)</span>
+          </div>
+          <span>•</span>
+          <time datetime="2026-11-19">19 de Noviembre, 2026</time>
+          <span>•</span>
+          <span class="flex items-center gap-1">
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+            9 min de lectura
+          </span>
+        </div>
+      </header>
+
+      <!-- Featured Banner Card -->
+      <div
+        class="mb-12 rounded-3xl overflow-hidden shadow-xl border border-stone-200 dark:border-stone-800 bg-gradient-to-br from-[#241407] via-[#43270a] to-[#1b0d03] p-8 sm:p-10 text-white relative">
+        <div class="grid sm:grid-cols-2 gap-6 items-center relative z-10">
+          <div>
+            <span
+              class="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[11px] font-mono uppercase tracking-wider text-brand-200 mb-3">
+              De Fundamentals a Developer
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight">
+              PL-900 + PL-400
+            </h2>
+            <p class="text-sm text-brand-100/90 mt-2 leading-relaxed">
+              No se trata de memorizar menús, sino de dominar cuándo usar código, cuándo configurar y cómo diseñar
+              soluciones escalables sobre Dataverse.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-3 font-mono text-xs">
+            <div class="p-4 rounded-2xl bg-black/30 border border-white/10">
+              <div class="text-brand-300 font-bold text-sm">PL-900</div>
+              <div class="text-stone-300 mt-1">Valor de negocio, ecosistema y casos de uso</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-black/30 border border-white/10">
+              <div class="text-amber-300 font-bold text-sm">PL-400</div>
+              <div class="text-stone-300 mt-1">Extensibilidad, C#, JS, PCF, APIs y ALM</div>
+            </div>
+            <div
+              class="col-span-2 p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
+              <span class="text-stone-300">Enfoque clave:</span>
+              <span class="text-brand-200 font-semibold">Arquitectura + Práctica Real</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prose / Body -->
+      <div class="space-y-6 text-stone-700 dark:text-stone-300 text-base sm:text-lg leading-relaxed">
+
+        <p class="text-xl sm:text-2xl text-stone-900 dark:text-white font-medium leading-relaxed">
+          Cuando empecé mi ruta de certificación en <strong>AlgoritmoIT</strong>, cometí el error que casi todos
+          cometemos al principio: estudiar pensando en preguntas aisladas y no en escenarios completos de arquitectura.
+        </p>
+
+        <p>
+          Microsoft no evalúa si sabes dónde está un botón. En el <strong>PL-900 (Power Platform Fundamentals)</strong>
+          evalúa si entiendes qué pieza del ecosistema resuelve cada problema de negocio; en el <strong>PL-400 (Power
+            Platform Developer)</strong> evalúa si sabes extender la plataforma sin romper el rendimiento, la seguridad
+          ni el ciclo de vida de las aplicaciones (ALM).
+        </p>
+
+        <!-- Comparison Table -->
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          PL-900 vs. PL-400: Dos mentalidades distintas
+        </h2>
+        <div
+          class="my-6 overflow-x-auto rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-sm">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr
+                class="border-b border-stone-200 dark:border-stone-800 bg-brand-50/70 dark:bg-brand-950/50 text-stone-900 dark:text-white">
+                <th class="p-4 font-bold">Dimensión</th>
+                <th class="p-4 font-bold">PL-900 (Fundamentals)</th>
+                <th class="p-4 font-bold">PL-400 (Developer)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200 dark:divide-stone-800 text-stone-600 dark:text-stone-300">
+              <tr>
+                <td class="p-4 font-semibold text-stone-900 dark:text-white">Pregunta central</td>
+                <td class="p-4">¿Qué herramienta conviene usar y por qué?</td>
+                <td class="p-4">¿Cómo implemento, extiendo y aseguro esta solución?</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-stone-900 dark:text-white">Peso de Dataverse</td>
+                <td class="p-4">Conceptos de tablas, columnas, relaciones y seguridad básica.</td>
+                <td class="p-4">Modelado avanzado, claves alternas, auditoría, seguridad por fila/columna y API Web.
+                </td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-stone-900 dark:text-white">Código y extensión</td>
+                <td class="p-4">No requiere programar; basta identificar conectores y capacidades.</td>
+                <td class="p-4">Plugins en C#, JavaScript en Model-Driven Apps, PCF, Custom Connectors y Azure.</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-stone-900 dark:text-white">Formato de examen</td>
+                <td class="p-4">Directo y conceptual (ideal para cimentar vocabulario oficial).</td>
+                <td class="p-4">Casos de estudio largos con restricciones técnicas y de licenciamiento.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          Paso 1: Cómo superar el PL-900 sin perder tiempo
+        </h2>
+        <p>
+          El PL-900 es tu mapa del territorio. Aunque tengas experiencia técnica previa, vale la pena presentarlo porque
+          te obliga a dominar la terminología exacta de Microsoft y las fronteras entre cada servicio:
+        </p>
+        <ul class="space-y-3 text-base pl-1">
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-[#43270a] dark:bg-brand-400 mt-2.5 shrink-0"></span>
+            <div><strong>Canvas Apps vs. Model-Driven Apps:</strong> Canvas parte de la interfaz y conecta múltiples
+              fuentes; Model-Driven parte del modelo de datos en <strong>Dataverse</strong> y genera la interfaz a
+              partir de formularios, vistas y procesos de negocio (BPF).</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-[#784820] dark:bg-amber-400 mt-2.5 shrink-0"></span>
+            <div><strong>Tipos de flujos en Power Automate:</strong> Distingue bien entre flujos automatizados (por
+              evento), instantáneos (manuales), programados y <em>Business Process Flows</em>.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-stone-500 mt-2.5 shrink-0"></span>
+            <div><strong>Copilot Studio y Power BI:</strong> Entiende cómo Copilot Studio orquesta temas, acciones y
+              conocimiento, y cómo Power BI separa el trabajo de <em>Power BI Desktop</em> (modelado) del <em>Power BI
+                Service</em> (publicación y compartición).</div>
+          </li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-6">
+          Paso 2: Los temas indispensables del PL-400
+        </h2>
+        <p>
+          Aquí es donde el examen se vuelve serio. En el PL-400 Microsoft asume que ya sabes crear una app o un flujo
+          básico y se concentra en <strong>extensibilidad y arquitectura empresarial</strong>:
+        </p>
+
+        <!-- Technical Pillars Box -->
+        <div
+          class="my-8 p-6 rounded-3xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm space-y-4">
+          <h3 class="text-lg font-bold text-stone-900 dark:text-white flex items-center gap-2">
+            <i data-lucide="cpu" class="w-5 h-5 text-brand-600 dark:text-brand-400"></i>
+            Los 5 pilares que dominan el examen PL-400
+          </h3>
+          <div class="space-y-3 text-sm text-stone-600 dark:text-stone-300">
+            <div
+              class="p-3.5 rounded-2xl bg-stone-50 dark:bg-stone-950 border border-stone-200/70 dark:border-stone-800">
+              <strong class="text-stone-900 dark:text-white">1. Event Execution Pipeline y Plugins en C#:</strong>
+              Entender las etapas <em>Pre-Validation</em>, <em>Pre-Operation</em> y <em>Post-Operation</em>, además de
+              cuándo usar <code>InputParameters</code>, <code>PreEntityImages</code> y <code>PostEntityImages</code>.
+            </div>
+            <div
+              class="p-3.5 rounded-2xl bg-stone-50 dark:bg-stone-950 border border-stone-200/70 dark:border-stone-800">
+              <strong class="text-stone-900 dark:text-white">2. Client Scripting (JavaScript / TypeScript):</strong>
+              Manipulación del contexto de formulario (<code>formContext</code>), eventos <code>OnLoad</code>,
+              <code>OnChange</code> y <code>OnSave</code>, y llamadas asíncronas con <code>Xrm.WebApi</code>.
+            </div>
+            <div
+              class="p-3.5 rounded-2xl bg-stone-50 dark:bg-stone-950 border border-stone-200/70 dark:border-stone-800">
+              <strong class="text-stone-900 dark:text-white">3. Power Apps Component Framework (PCF):</strong> Ciclo de
+              vida de un componente (<code>init</code>, <code>updateView</code>, <code>getOutputs</code>,
+              <code>destroy</code>) y cómo empaquetarlo para Canvas o Model-Driven Apps.
+            </div>
+            <div
+              class="p-3.5 rounded-2xl bg-stone-50 dark:bg-stone-950 border border-stone-200/70 dark:border-stone-800">
+              <strong class="text-stone-900 dark:text-white">4. Integraciones y Custom Connectors:</strong>
+              Autenticación OAuth 2.0, políticas de transformación, Webhooks, Azure Service Bus, Azure Functions y
+              límites de protección de servicio (<em>Service Protection API Limits</em> con errores HTTP 429).
+            </div>
+            <div
+              class="p-3.5 rounded-2xl bg-stone-50 dark:bg-stone-950 border border-stone-200/70 dark:border-stone-800">
+              <strong class="text-stone-900 dark:text-white">5. ALM y Soluciones:</strong> Diferencias reales entre
+              soluciones <em>Unmanaged</em> (desarrollo) y <em>Managed</em> (pruebas y producción), uso de
+              <em>Environment Variables</em> y <em>Connection References</em>.
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          5 Trampas comunes en el examen de desarrollador (PL-400)
+        </h2>
+        <p>
+          Muchas preguntas tienen dos respuestas que técnicamente "funcionan", pero solo una cumple con las mejores
+          prácticas de Microsoft:
+        </p>
+        <ol class="list-decimal pl-6 space-y-3 text-base">
+          <li>
+            <strong>Usar código cuando basta una configuración nativa:</strong> Si un requisito se resuelve con una
+            <em>Business Rule</em>, un campo calculado o un rol de seguridad, escribir un plugin o JavaScript es la
+            respuesta incorrecta. Microsoft siempre premia el enfoque <em>low-code first, code when needed</em>.
+          </li>
+          <li>
+            <strong>Confundir validación de UI con integridad de datos:</strong> El JavaScript en formularios solo corre
+            en el cliente. Si el caso de estudio dice que los datos también entran por API, Excel o Power Automate, la
+            validación debe ir en un <strong>Plugin (Pre-Validation / Pre-Operation)</strong> o regla de servidor, nunca
+            solo en el formulario.
+          </li>
+          <li>
+            <strong>Hacer llamadas HTTP externas dentro de un Plugin síncrono:</strong> Un plugin síncrono bloquea la
+            transacción del usuario y tiene un límite estricto de tiempo (2 minutos). Si el escenario pide integrar un
+            ERP externo sin bloquear al usuario, la respuesta suele apuntar a un <strong>Plugin asíncrono</strong>,
+            <strong>Webhook</strong> o <strong>Azure Service Bus</strong>.
+          </li>
+          <li>
+            <strong>Olvidar los encabezados en Dataverse Web API:</strong> Preguntas muy específicas evalúan si sabes
+            usar <code>Prefer: return=representation</code> para recibir el registro creado en un <code>POST</code>, o
+            <code>If-Match</code> / ETags para control de concurrencia optimista.
+          </li>
+          <li>
+            <strong>Hardcodear URLs o credenciales entre ambientes:</strong> Si el caso pregunta cómo mover una solución
+            de Dev a Prod sin editar flujos manualmente, la clave siempre son las <strong>Environment Variables</strong>
+            y <strong>Connection References</strong> dentro de una solución administrada.
+          </li>
+        </ol>
+
+        <blockquote
+          class="my-8 p-6 rounded-2xl bg-brand-50/80 dark:bg-brand-950/40 border-l-4 border-[#43270a] dark:border-brand-400 italic text-stone-800 dark:text-stone-200">
+          "La certificación no es un adorno en LinkedIn: cuando te enfrentas a un despliegue real en producción, haber
+          entendido por qué existe cada capa de Dataverse y Power Automate te ahorra semanas de retrabajo."
+        </blockquote>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          Cómo poner en práctica la teoría con proyectos reales
+        </h2>
+        <p>
+          Lo que realmente consolidó mi preparación en <strong>AlgoritmoIT</strong> —y lo que hoy aplico día a día en
+          proyectos de digitalización y automatización en <strong>Toyota Tsusho México</strong>— fue aterrizar cada tema
+          del temario en un entregable tangible:
+        </p>
+        <ul class="space-y-3 text-base pl-1">
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-[#43270a] dark:bg-brand-400 mt-2.5 shrink-0"></span>
+            <div><strong>Construye un mini-CRM completo en tu entorno de desarrollador:</strong> Crea tablas
+              relacionadas en Dataverse (Clientes, Solicitudes, Seguimientos), configura roles de seguridad por unidad
+              de negocio y arma una Model-Driven App con un flujo de proceso de negocio.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-[#784820] dark:bg-amber-400 mt-2.5 shrink-0"></span>
+            <div><strong>Conecta un agente de Copilot Studio con Power Automate y Dataverse:</strong> Tal como hicimos
+              en soluciones reales de atención al cliente, haz que el agente consulte registros por clave alterna,
+              valide permisos y cree tickets estructurados sin duplicar datos.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-stone-500 mt-2.5 shrink-0"></span>
+            <div><strong>Practica un ciclo ALM de punta a punta:</strong> Crea dos ambientes (Dev y Test), empaqueta tu
+              solución con variables de entorno, expórtala como <em>Managed</em> e impórtala verificando que no queden
+              capas no administradas (<em>Unmanaged Layers</em>).</div>
+          </li>
+        </ul>
+
+        <p class="pt-2">
+          Si estás preparando alguna de estas dos certificaciones o quieres llevar tus desarrollos en Power Platform al
+          siguiente nivel arquitectónico, escríbeme: estaré encantado de compartir recursos, recomendaciones de estudio
+          y experiencias reales de implementación.
+        </p>
+
+      </div>
+
+      <!-- Author Card -->
+      <div
+        class="mt-16 p-6 sm:p-8 rounded-3xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
+        <div class="w-20 h-20 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-500/40">
+          <img src="https://i.postimg.cc/g0K2qVDJ/profile-img.webp" alt="M. Peña" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1 text-center sm:text-left">
+          <div class="flex items-center justify-center sm:justify-start gap-2">
+            <h3 class="font-bold text-lg text-stone-900 dark:text-white">M. Peña</h3>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-950 text-brand-800 dark:text-brand-300 text-[10px] font-bold border border-brand-200 dark:border-brand-800">PL-900
+              &amp; PL-400 Certified</span>
+          </div>
+          <p class="text-xs text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">
+            Especialista en Power Platform &amp; Innovación Digital en Toyota Tsusho México. Egresado con excelencia de
+            La Salle Bajío. Apasionado de la IA, los videojuegos, la fotografía y el gimnasio.
+          </p>
+          <div class="mt-3 flex items-center justify-center sm:justify-start gap-3">
+            <a href="./index.html#contacto"
+              class="text-xs font-semibold text-brand-700 dark:text-brand-300 hover:underline">
+              Ponerte en contacto
+            </a>
+            <span class="text-stone-300 dark:text-stone-700">•</span>
+            <a href="./index.html#logros"
+              class="text-xs font-semibold text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white">
+              Ver más logros
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post Nav Bottom -->
+      <div
+        class="mt-10 pt-6 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between text-sm font-semibold">
+        <a href="./blog.html"
+          class="inline-flex items-center gap-2 text-stone-600 dark:text-stone-400 hover:text-brand-800 dark:hover:text-brand-300">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          <span>Volver al blog</span>
+        </a>
+        <a href="./index.html" class="text-brand-700 dark:text-brand-300 hover:underline">
+          Ir a la portada principal
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    class="border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 py-8 text-xs text-stone-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© <span id="current-year">2026</span> M. Peña. Todos los derechos reservados.</p>
+      <a href="./index.html" class="text-brand-700 dark:text-brand-300 hover:underline">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

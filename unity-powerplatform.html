@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Unity a la Power Platform: Cómo los videojuegos forjaron mi mente analítica | Blog M. Peña</title>
+  <meta name="description"
+    content="Cómo mi etapa desarrollando interactivos 2D, 3D, Realidad Aumentada y Realidad Virtual en Unity dentro de Colektor moldeó mi forma de diseñar UX, optimizar recursos y construir automatizaciones en Power Platform.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fbf7f4',
+              100: '#f5ebe2',
+              200: '#edd8c6',
+              300: '#e0bda2',
+              400: '#c59570',
+              500: '#9b643a',
+              600: '#784820',
+              700: '#593414',
+              800: '#43270a',
+              900: '#321c07',
+              950: '#1b0d03',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body
+  class="bg-[#faf8f6] text-stone-800 dark:bg-[#12100e] dark:text-stone-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
+
+  <!-- Navbar -->
+  <header
+    class="sticky top-0 z-50 backdrop-blur-md bg-[#faf8f6]/85 dark:bg-[#12100e]/85 border-b border-stone-200/80 dark:border-stone-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="./blog.html"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-stone-600 dark:text-stone-300 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Volver a artículos</span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro"
+          class="p-2 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-900 transition-all">
+          <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+          <i data-lucide="sun" class="w-4 h-4 block dark:hidden"></i>
+        </button>
+
+        <a href="./index.html"
+          class="p-2 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-900 transition-all"
+          title="Ir a la portada">
+          <i data-lucide="home" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <main class="flex-1 py-12 md:py-20">
+    <article class="max-w-3xl mx-auto px-4 sm:px-6">
+
+      <!-- Post Meta Header -->
+      <header class="mb-10 text-center">
+        <div
+          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 dark:bg-brand-950 border border-brand-200 dark:border-brand-800 text-brand-800 dark:text-brand-200 text-xs font-semibold mb-4">
+          <i data-lucide="gamepad-2" class="w-3.5 h-3.5"></i>
+          Ingeniería &amp; Mindset • Unity a Power Platform
+        </div>
+
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-stone-900 dark:text-white tracking-tight leading-[1.18]">
+          De Unity a la Power Platform: Cómo los videojuegos forjaron mi mente analítica
+        </h1>
+
+        <p class="mt-4 text-base sm:text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
+          Cómo desarrollar interactivos 2D, 3D, realidad aumentada y VR en Colektor me enseñó a pensar en experiencia de
+          usuario, optimización de recursos y lógica que hoy aplico en automatizaciones complejas.
+        </p>
+
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-stone-500 dark:text-stone-400">
+          <div class="flex items-center gap-2">
+            <img src="https://i.postimg.cc/g0K2qVDJ/profile-img.webp" alt="M. Peña"
+              class="w-7 h-7 rounded-full object-cover">
+            <span class="font-semibold text-stone-800 dark:text-stone-200">Manuel Peña (M. Peña)</span>
+          </div>
+          <span>•</span>
+          <time datetime="2026-11-19">19 de Noviembre, 2026</time>
+          <span>•</span>
+          <span class="flex items-center gap-1">
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+            7 min de lectura
+          </span>
+        </div>
+      </header>
+
+      <!-- Visual Bridge Banner -->
+      <div
+        class="mb-12 rounded-3xl overflow-hidden shadow-xl border border-stone-200 dark:border-stone-800 bg-gradient-to-br from-[#241407] via-[#43270a] to-[#1b0d03] p-8 sm:p-10 text-white">
+        <div class="grid sm:grid-cols-2 gap-6 items-center">
+          <div>
+            <span
+              class="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[11px] font-mono uppercase tracking-wider text-brand-200 mb-3">
+              De Colektor (Unity) a Sistemas Empresariales
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight">
+              2D • 3D • AR • VR <span class="text-brand-300">→</span> Cloud &amp; AI
+            </h2>
+            <p class="text-sm text-brand-100/90 mt-2 leading-relaxed">
+              Cambiar un motor gráfico por orquestadores empresariales no significa empezar de cero: los principios de
+              estado, rendimiento y UX son exactamente los mismos.
+            </p>
+          </div>
+          <div class="space-y-2.5 font-mono text-xs">
+            <div class="p-3.5 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-between">
+              <span class="text-stone-300">Frame Budget (60 FPS)</span>
+              <span class="text-brand-300 font-bold">→ Consumo de APIs &amp; Créditos</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-between">
+              <span class="text-stone-300">Máquinas de Estado</span>
+              <span class="text-amber-300 font-bold">→ Flujos &amp; Agentes IA</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-between">
+              <span class="text-stone-300">Interacción AR / VR</span>
+              <span class="text-brand-200 font-bold">→ UX Intuitiva en Apps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prose / Body -->
+      <div class="space-y-6 text-stone-700 dark:text-stone-300 text-base sm:text-lg leading-relaxed">
+
+        <p class="text-xl sm:text-2xl text-stone-900 dark:text-white font-medium leading-relaxed">
+          A primera vista, desarrollar experiencias de realidad virtual en <strong>Unity</strong> y construir
+          arquitecturas empresariales en <strong>Microsoft Power Platform</strong> parecen dos mundos completamente
+          opuestos. En la práctica, el primero fue el mejor entrenamiento posible para el segundo.
+        </p>
+
+        <p>
+          Durante aproximadamente un año trabajé como pasante en <strong>Colektor</strong> desarrollando proyectos
+          interactivos en <strong>2D, 3D, Realidad Aumentada (AR) y Realidad Virtual (VR)</strong> con Unity y C#. Más
+          allá de aprender a programar mecánicas, escenas o interfaces espaciales, esa etapa moldeó la forma en la que
+          hoy analizo cualquier problema técnico antes de escribir una sola línea de código o configurar un flujo.
+        </p>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          1. Experiencia de usuario sin manual de instrucciones
+        </h2>
+        <p>
+          En un interactivo 2D o en un entorno de <strong>Realidad Virtual</strong>, nadie lee un manual antes de
+          empezar. Si el usuario no entiende hacia dónde mirar, qué botón presionar o qué ocurrió tras realizar una
+          acción, la experiencia se rompe en segundos.
+        </p>
+        <p>
+          Cuando diseñaba interfaces y recorridos interactivos en Colektor, aprendí a obsesionarme con la claridad
+          visual, la retroalimentación inmediata y la prevención de errores del usuario. Hoy aplico exactamente esa
+          misma mentalidad cuando diseño una <strong>Canvas App</strong> o la conversación de un agente en
+          <strong>Copilot Studio</strong>: si un colaborador o cliente necesita capacitación extensa para usar una
+          herramienta interna, el diseño todavía tiene fricción que eliminar.
+        </p>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          2. Optimización de recursos: de cuidar cada frame a cuidar cada llamada
+        </h2>
+        <p>
+          Desarrollar para dispositivos móviles en <strong>Realidad Aumentada</strong> o visores de <strong>VR</strong>
+          te obliga a respetar presupuestos estrictos de memoria, polígonos y ciclos de CPU. Un bucle mal planteado
+          dentro de un <code>Update()</code> o instanciar objetos sin control desploma los cuadros por segundo y arruina
+          la experiencia.
+        </p>
+        <p>
+          En <strong>Power Platform</strong> y <strong>Azure</strong> la física es distinta, pero la disciplina es
+          idéntica:
+        </p>
+        <ul class="space-y-3 text-base pl-1">
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-[#43270a] dark:bg-brand-400 mt-2.5 shrink-0"></span>
+            <div><strong>Evitar bucles innecesarios (Apply to each):</strong> Así como en Unity evitas cálculos pesados
+              por frame, en Power Automate aprendes a filtrar desde el origen con consultas OData en lugar de traer
+              miles de registros y recorrerlos uno por uno.</div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-[#784820] dark:bg-amber-400 mt-2.5 shrink-0"></span>
+            <div><strong>Gestión consciente del consumo:</strong> Optimizar llamadas a APIs, caché de datos y consumo de
+              créditos en agentes de IA responde al mismo instinto de ingeniería: lograr el máximo impacto con el menor
+              desperdicio computacional.</div>
+          </li>
+        </ul>
+
+        <!-- Translation Table: Unity to Power Platform -->
+        <div
+          class="my-8 overflow-x-auto rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-sm">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr
+                class="border-b border-stone-200 dark:border-stone-800 bg-brand-50/70 dark:bg-brand-950/50 text-stone-900 dark:text-white">
+                <th class="p-4 font-bold">Concepto en Unity (2D/3D/AR/VR)</th>
+                <th class="p-4 font-bold">Equivalente en Power Platform &amp; IA</th>
+                <th class="p-4 font-bold">Impacto en el negocio</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200 dark:divide-stone-800 text-stone-600 dark:text-stone-300">
+              <tr>
+                <td class="p-4 font-semibold text-stone-900 dark:text-white">Máquinas de estado y eventos</td>
+                <td class="p-4">Triggers, condiciones, ramas paralelas y <em>Business Process Flows</em>.</td>
+                <td class="p-4">Procesos predecibles sin estados huérfanos ni bloqueos.</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-stone-900 dark:text-white">Scripts modulares en C#</td>
+                <td class="p-4">Plugins en Dataverse, flujos hijos reutilizables y soluciones desacopladas.</td>
+                <td class="p-4">Mantenimiento ágil y escalabilidad entre áreas o plantas.</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-stone-900 dark:text-white">Feedback visual y sonoro (UX)</td>
+                <td class="p-4">Pantallas de carga claras, validaciones preventivas y respuestas conversacionales
+                  naturales.</td>
+                <td class="p-4">Mayor adopción real por parte de usuarios operativos y clientes.</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-stone-900 dark:text-white">Object Pooling y gestión de memoria</td>
+                <td class="p-4">Consultas delegables, paginación y control de límites de API.</td>
+                <td class="p-4">Sistemas rápidos y estables incluso bajo alta demanda.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          3. Lógica orientada a eventos y pensamiento sistémico
+        </h2>
+        <p>
+          Construir interactivos en Unity te obliga a pensar en <strong>sistemas vivos</strong> donde múltiples
+          elementos reaccionan en tiempo real: colisiones, entradas del usuario, animaciones, estados de escena y
+          validaciones de reglas. Además, trabajar con <strong>C# en Unity</strong> me dio una base natural que más
+          tarde facilitó enormemente mi camino hacia el examen <strong>PL-400</strong> y el desarrollo de extensiones
+          empresariales.
+        </p>
+        <p>
+          Cuando hoy diseño una automatización compleja —ya sea un agente conversacional conectado a un e-commerce o un
+          flujo corporativo de aprobaciones—, visualizo el proceso completo como una escena interactiva: identifico qué
+          dispara cada evento, qué puede salir mal si el usuario toma un camino inesperado y cómo garantizar que el
+          sistema siempre regrese a un estado seguro.
+        </p>
+
+        <blockquote
+          class="my-8 p-6 rounded-2xl bg-brand-50/80 dark:bg-brand-950/40 border-l-4 border-[#43270a] dark:border-brand-400 italic text-stone-800 dark:text-stone-200">
+          "Los videojuegos te enseñan algo que ningún libro de teoría empresarial transmite igual: la tecnología solo
+          cobra sentido cuando alguien la usa con fluidez, responde al instante y resiste cualquier camino inesperado
+          del usuario."
+        </blockquote>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          Lo que me llevo de esa etapa para mi carrera hoy
+        </h2>
+        <p>
+          Mi paso por <strong>Colektor</strong> construyendo interactivos 2D, 3D, AR y VR me dejó tres convicciones que
+          siguen guiando mi trabajo diario en innovación digital:
+        </p>
+        <ol class="list-decimal pl-6 space-y-3 text-base">
+          <li>
+            <strong>Curiosidad sin fronteras tecnológicas:</strong> No encasillarte en una sola herramienta te permite
+            conectar ideas de distintos mundos y encontrar soluciones creativas donde otros solo ven procesos rígidos.
+          </li>
+          <li>
+            <strong>Empatía radical con quien usa el sistema:</strong> Ya sea un jugador con visor VR o un colaborador
+            en planta o administración, la interfaz debe trabajar para la persona, nunca al revés.
+          </li>
+          <li>
+            <strong>Rigor técnico detrás de una experiencia simple:</strong> Mientras más sencilla y natural luce una
+            aplicación o un agente por fuera, más limpia y disciplinada debe ser su arquitectura por dentro.
+          </li>
+        </ol>
+
+      </div>
+
+      <!-- Author Card -->
+      <div
+        class="mt-16 p-6 sm:p-8 rounded-3xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
+        <div class="w-20 h-20 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-500/40">
+          <img src="https://i.postimg.cc/g0K2qVDJ/profile-img.webp" alt="M. Peña" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1 text-center sm:text-left">
+          <div class="flex items-center justify-center sm:justify-start gap-2">
+            <h3 class="font-bold text-lg text-stone-900 dark:text-white">M. Peña</h3>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-950 text-brand-800 dark:text-brand-300 text-[10px] font-bold border border-brand-200 dark:border-brand-800">PL-400
+              Certified</span>
+          </div>
+          <p class="text-xs text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">
+            Especialista en Power Platform &amp; Innovación Digital en Toyota Tsusho México. Egresado con excelencia de
+            La Salle Bajío. Apasionado de la IA, los videojuegos, la fotografía y el gimnasio.
+          </p>
+          <div class="mt-3 flex items-center justify-center sm:justify-start gap-3">
+            <a href="./index.html#contacto"
+              class="text-xs font-semibold text-brand-700 dark:text-brand-300 hover:underline">
+              Ponerte en contacto
+            </a>
+            <span class="text-stone-300 dark:text-stone-700">•</span>
+            <a href="./index.html#logros"
+              class="text-xs font-semibold text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white">
+              Ver más logros
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post Nav Bottom -->
+      <div
+        class="mt-10 pt-6 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between text-sm font-semibold">
+        <a href="./blog.html"
+          class="inline-flex items-center gap-2 text-stone-600 dark:text-stone-400 hover:text-brand-800 dark:hover:text-brand-300">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          <span>Volver al blog</span>
+        </a>
+        <a href="./index.html" class="text-brand-700 dark:text-brand-300 hover:underline">
+          Ir a la portada principal
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    class="border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 py-8 text-xs text-stone-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© <span id="current-year">2026</span> M. Peña. Todos los derechos reservados.</p>
+      <a href="./index.html" class="text-brand-700 dark:text-brand-300 hover:underline">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Agente de IA para Tiendas CUADRA que llegó al Webinar de Microsoft CAT | Blog M. Peña</title>
+  <meta name="description" content="Caso de éxito real con Microsoft Copilot Studio, Power Automate y Dynamics 365 para Tiendas CUADRA, presentado ante Microsoft Customer Advisory Team (CAT).">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fbf7f4',
+              100: '#f5ebe2',
+              200: '#edd8c6',
+              300: '#e0bda2',
+              400: '#c59570',
+              500: '#9b643a',
+              600: '#784820',
+              700: '#593414',
+              800: '#43270a',
+              900: '#321c07',
+              950: '#1b0d03',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="bg-[#faf8f6] text-stone-800 dark:bg-[#12100e] dark:text-stone-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#faf8f6]/85 dark:bg-[#12100e]/85 border-b border-stone-200/80 dark:border-stone-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="./blog.html" class="inline-flex items-center gap-2 text-sm font-semibold text-stone-600 dark:text-stone-300 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+        <span>Volver a artículos</span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro" class="p-2 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-900 transition-all">
+          <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+          <i data-lucide="sun" class="w-4 h-4 block dark:hidden"></i>
+        </button>
+
+        <a href="./index.html" class="p-2 rounded-xl border border-stone-200 dark:border-stone-800 text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-900 transition-all" title="Ir a la portada">
+          <i data-lucide="home" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <main class="flex-1 py-12 md:py-20">
+    <article class="max-w-3xl mx-auto px-4 sm:px-6">
+
+      <!-- Post Meta Header -->
+      <header class="mb-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 dark:bg-brand-950 border border-brand-200 dark:border-brand-800 text-brand-800 dark:text-brand-200 text-xs font-semibold mb-4">
+          <i data-lucide="bot" class="w-3.5 h-3.5"></i>
+          Caso de Éxito Real • Microsoft Copilot Studio &amp; CAT
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-stone-900 dark:text-white tracking-tight leading-[1.18]">
+          Cómo creamos el Agente de IA para Tiendas CUADRA que llegó al Webinar de Microsoft CAT
+        </h1>
+
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-stone-500 dark:text-stone-400">
+          <div class="flex items-center gap-2">
+            <img src="https://i.postimg.cc/g0K2qVDJ/profile-img.webp" alt="M. Peña" class="w-7 h-7 rounded-full object-cover">
+            <span class="font-semibold text-stone-800 dark:text-stone-200">Manuel Peña (M. Peña)</span>
+          </div>
+          <span>•</span>
+          <time datetime="2026-11-15">15 de Noviembre, 2026</time>
+          <span>•</span>
+          <span class="flex items-center gap-1">
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+            8 min de lectura
+          </span>
+        </div>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="mb-12 rounded-3xl overflow-hidden shadow-2xl border border-stone-200 dark:border-stone-800 aspect-video relative bg-stone-900">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Inteligencia Artificial y Copilot Studio" class="w-full h-full object-cover opacity-85">
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-transparent to-transparent flex items-end p-6">
+          <p class="text-xs text-stone-200 font-mono">Caso presentado junto a Carlos Damián ante el equipo de Microsoft Customer Advisory Team (CAT)</p>
+        </div>
+      </div>
+
+      <!-- Prose / Body -->
+      <div class="space-y-6 text-stone-700 dark:text-stone-300 text-base sm:text-lg leading-relaxed">
+
+        <p class="text-xl sm:text-2xl text-stone-900 dark:text-white font-medium leading-relaxed">
+          Pocas experiencias en el desarrollo de soluciones empresariales se comparan con ver cómo un asistente diseñado para resolver un reto real de retail en Guanajuato termina documentado por Microsoft y expuesto ante su equipo de Customer Advisory Team.
+        </p>
+
+        <p>
+          Durante mi etapa en <strong>AlgoritmoIT</strong>, tras egresar con excelencia de la Universidad De La Salle Bajío en León, Guanajuato, profundicé en la <strong>Microsoft Power Platform</strong>. Lo que comenzó con automatizaciones y aplicaciones escaló rápidamente hacia <strong>agentes conversacionales y orientados a tareas en Microsoft Copilot Studio</strong>, conectados con los sistemas operativos del negocio.
+        </p>
+
+        <!-- Webinar Highlight Box -->
+        <div class="my-8 p-6 rounded-3xl bg-brand-50 dark:bg-brand-950/40 border border-brand-200 dark:border-brand-800">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-[11px] font-mono uppercase tracking-wider text-brand-700 dark:text-brand-300 font-semibold">Grabación Oficial • Microsoft Power Platform</span>
+              <h2 class="text-lg font-bold text-stone-900 dark:text-white mt-1">Real world Agent Case Studies: Tienda Cuadra + Algoritmo IT</h2>
+              <p class="text-sm text-stone-600 dark:text-stone-300 mt-1">
+                Participación junto a Carlos Damián mostrando la arquitectura, flujos de soporte y descubrimiento visual de productos.
+              </p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=sLcjMjYmAkg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#43270a] hover:bg-[#593414] text-white text-sm font-semibold shrink-0 transition-colors">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              <span>Ver en YouTube</span>
+            </a>
+          </div>
+          <div class="mt-4 pt-4 border-t border-brand-200/70 dark:border-brand-800/70 grid sm:grid-cols-2 gap-2 text-xs font-mono text-stone-600 dark:text-stone-300">
+            <div><span class="font-bold text-brand-800 dark:text-brand-300">[07:12]</span> Arquitectura y Agent Atlas</div>
+            <div><span class="font-bold text-brand-800 dark:text-brand-300">[09:22]</span> Fase 1 vs. Fase 2 del agente</div>
+            <div><span class="font-bold text-brand-800 dark:text-brand-300">[11:32]</span> Demo: Pedidos y tickets</div>
+            <div><span class="font-bold text-brand-800 dark:text-brand-300">[15:36]</span> Demo: Imagen y sets con IA</div>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          El Reto: Atención 24/7 y descubrimiento de producto en Tiendas CUADRA
+        </h2>
+        <p>
+          <strong>Tiendas CUADRA</strong> es una marca icónica de calzado, marroquinería y accesorios de piel originaria de Guanajuato, con presencia comercial y digital exigente. Los clientes no solo necesitan resolver dudas operativas rápidas, sino también encontrar combinaciones y piezas afines a su estilo sin fricción.
+        </p>
+        <p>
+          Por ello diseñamos una estrategia en dos etapas: primero resolver la fricción del soporte 24/7 en su canal e-commerce (con validación segura de datos) y, en una segunda fase, evolucionar hacia el <strong>descubrimiento visual de productos y creación de conjuntos (product sets)</strong>.
+        </p>
+
+        <!-- Phase Comparison Table -->
+        <div class="my-8 overflow-x-auto rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-sm">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-stone-200 dark:border-stone-800 bg-brand-50/70 dark:bg-brand-950/50 text-stone-900 dark:text-white">
+                <th class="p-4 font-bold">Etapa</th>
+                <th class="p-4 font-bold">Enfoque principal</th>
+                <th class="p-4 font-bold">Capacidades clave</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200 dark:divide-stone-800 text-stone-600 dark:text-stone-300">
+              <tr>
+                <td class="p-4 font-semibold text-stone-900 dark:text-white whitespace-nowrap">Fase 1 (Soporte)</td>
+                <td class="p-4">Reducir fricción en atención al cliente 24/7 dentro del e-commerce.</td>
+                <td class="p-4">Consulta de estatus de pedidos (validando correo vinculado a la orden) y creación de tickets eligiendo canal preferido (llamada, WhatsApp o correo).</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-semibold text-stone-900 dark:text-white whitespace-nowrap">Fase 2 (Descubrimiento)</td>
+                <td class="p-4">Generar valor comercial y enriquecer la exploración de catálogo.</td>
+                <td class="p-4">Reconocimiento a partir de una imagen subida por el usuario, generación visual de un conjunto (chamarras, sombreros, bolsos, etc.) y envío de enlaces a productos reales de la tienda.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Architecture Breakdown -->
+        <div class="my-8 p-6 rounded-3xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-sm">
+          <h3 class="text-lg font-bold text-stone-900 dark:text-white mb-4 flex items-center gap-2">
+            <i data-lucide="layers" class="w-5 h-5 text-brand-600 dark:text-brand-400"></i>
+            Arquitectura multiagente y componentes de la solución
+          </h3>
+          <ul class="space-y-3.5 text-sm text-stone-600 dark:text-stone-300">
+            <li class="flex items-start gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-[#43270a] dark:bg-brand-400 mt-1.5 shrink-0"></span>
+              <div><strong>Agentes especializados (Agent Atlas &amp; Product Set Agent):</strong> <em>Agent Atlas</em> atiende la interacción directa con el cliente y los flujos de ingreso/soporte, mientras el <em>Product Set Agent</em> apoya tareas específicas de armado de conjuntos de productos.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-[#784820] dark:bg-amber-400 mt-1.5 shrink-0"></span>
+              <div><strong>Microsoft Copilot Studio:</strong> Capa conversacional y de orquestación que interpreta intenciones y coordina respuestas y acciones.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-brand-500 mt-1.5 shrink-0"></span>
+              <div><strong>Power Automate:</strong> Brazo ejecutor para automatizar procesos, creación de casos y lógica de enrutamiento.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-stone-500 mt-1.5 shrink-0"></span>
+              <div><strong>Dynamics 365 Customer Service &amp; Dataverse:</strong> Gestión de tickets, seguimiento de clientes y almacenamiento estructurado y seguro de datos.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-stone-400 mt-1.5 shrink-0"></span>
+              <div><strong>Canales, E-commerce e IA Generativa:</strong> Integración con el e-commerce en <strong>Shopify</strong>, expansión hacia <strong>WhatsApp</strong> y uso de capacidades generativas (incluyendo generación de imágenes con <strong>OpenAI / GPT</strong>) para visualizar conjuntos.</div>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          Exponer ante Microsoft CAT: de un proyecto regional a una historia global
+        </h2>
+        <p>
+          Presentar este caso ante el equipo de <strong>Microsoft Customer Advisory Team (CAT)</strong> fue una experiencia clave tanto en lo técnico como en lo profesional: validar decisiones de diseño, seguridad de datos y experiencia de usuario frente a arquitectos y especialistas que acompañan despliegues de alto impacto.
+        </p>
+
+        <blockquote class="my-8 p-6 rounded-2xl bg-brand-50/80 dark:bg-brand-950/40 border-l-4 border-[#43270a] dark:border-brand-400 italic text-stone-800 dark:text-stone-200">
+          "Un agente aislado no genera el mismo impacto que uno bien integrado a los procesos del negocio; cuando los agentes colaboran y cuidamos la arquitectura, pasamos de simple automatización a flujos realmente inteligentes."
+        </blockquote>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          3 Aprendizajes prácticos que comparto en mi webinar
+        </h2>
+        <ol class="list-decimal pl-6 space-y-3 text-base">
+          <li>
+            <strong>Integra con los procesos y protege la información:</strong> Conectar el agente con sistemas reales (como pedidos y tickets) es lo que aporta valor, pero siempre validando identidad/datos sensibles antes de entregar información.
+          </li>
+          <li>
+            <strong>Diseña colaboración entre agentes y flujos claros:</strong> Separar responsabilidades entre la atención conversacional y tareas específicas (como la creación de conjuntos) mantiene el sistema ordenando y escalable.
+          </li>
+          <li>
+            <strong>Vigila el consumo de créditos desde el día uno:</strong> La forma en que diseñas la orquestación, las automatizaciones y el acceso a datos impacta directamente en la escalabilidad y los créditos; evita bucles innecesarios o ejecuciones redundantes.
+          </li>
+        </ol>
+
+        <h2 class="text-2xl font-bold text-stone-900 dark:text-white pt-4">
+          Recursos oficiales y proyección profesional
+        </h2>
+        <p>
+          Si quieres revisar el contexto oficial publicado por Microsoft o profundizar en la documentación técnica, puedes consultar los recursos de la historia de caso de Tiendas Cuadra en <em>Microsoft Customer Stories</em> y la guía de la solución en <em>Microsoft Learn</em>, además de la grabación completa del webinar en YouTube.
+        </p>
+        <p>
+          Con la base de mis certificaciones <strong>PL-900 y PL-400</strong> y la experiencia construida en AlgoritmoIT, hoy aplico este enfoque de innovación digital y automatización en <strong>Toyota Tsusho México</strong> en Puerto Interior, Guanajuato.
+        </p>
+
+      </div>
+
+      <!-- Author Card -->
+      <div class="mt-16 p-6 sm:p-8 rounded-3xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
+        <div class="w-20 h-20 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-500/40">
+          <img src="https://i.postimg.cc/g0K2qVDJ/profile-img.webp" alt="M. Peña" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1 text-center sm:text-left">
+          <div class="flex items-center justify-center sm:justify-start gap-2">
+            <h3 class="font-bold text-lg text-stone-900 dark:text-white">M. Peña</h3>
+            <span class="px-2.5 py-0.5 rounded-full bg-brand-100 dark:bg-brand-950 text-brand-800 dark:text-brand-300 text-[10px] font-bold border border-brand-200 dark:border-brand-800">PL-400 Certified</span>
+          </div>
+          <p class="text-xs text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">
+            Especialista en Power Platform &amp; Innovación Digital en Toyota Tsusho México. Egresado con excelencia de La Salle Bajío. Apasionado de la IA, los videojuegos, la fotografía y el gimnasio.
+          </p>
+          <div class="mt-3 flex items-center justify-center sm:justify-start gap-3">
+            <a href="./index.html#contacto" class="text-xs font-semibold text-brand-700 dark:text-brand-300 hover:underline">
+              Ponerte en contacto
+            </a>
+            <span class="text-stone-300 dark:text-stone-700">•</span>
+            <a href="./index.html#logros" class="text-xs font-semibold text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white">
+              Ver más logros
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post Nav Bottom -->
+      <div class="mt-10 pt-6 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between text-sm font-semibold">
+        <a href="./blog.html" class="inline-flex items-center gap-2 text-stone-600 dark:text-stone-400 hover:text-brand-800 dark:hover:text-brand-300">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          <span>Volver al blog</span>
+        </a>
+        <a href="./index.html" class="text-brand-700 dark:text-brand-300 hover:underline">
+          Ir a la portada principal
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-950 py-8 text-xs text-stone-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© <span id="current-year">2026</span> M. Peña. Todos los derechos reservados.</p>
+      <a href="./index.html" class="text-brand-700 dark:text-brand-300 hover:underline">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
