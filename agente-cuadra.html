@@ -24,17 +24,17 @@
           },
           colors: {
             brand: {
-              50: '#fbf7f4',
-              100: '#f5ebe2',
-              200: '#edd8c6',
-              300: '#e0bda2',
-              400: '#c59570',
-              500: '#9b643a',
-              600: '#784820',
-              700: '#593414',
-              800: '#43270a',
-              900: '#321c07',
-              950: '#1b0d03',
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb', // Azul profesional corporativo
+              700: '#1d4ed8',
+              800: '#1e40af', // Azul marino profundo
+              900: '#1e3a8a',
+              950: '#0f172a',
             }
           }
         }
@@ -46,10 +46,12 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body class="bg-[#faf8f6] text-stone-800 dark:bg-[#12100e] dark:text-stone-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
+<body
+  class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#faf8f6]/85 dark:bg-[#12100e]/85 border-b border-stone-200/80 dark:border-stone-800/80">
+  <header
+    class="sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-slate-950/85 border-b border-slate-200/80 dark:border-slate-800/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <a href="./blog.html" class="inline-flex items-center gap-2 text-sm font-semibold text-stone-600 dark:text-stone-300 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
         <i data-lucide="arrow-left" class="w-4 h-4"></i>
@@ -128,7 +130,8 @@
                 Participación junto a Carlos Damián mostrando la arquitectura, flujos de soporte y descubrimiento visual de productos.
               </p>
             </div>
-            <a href="https://www.youtube.com/watch?v=sLcjMjYmAkg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#43270a] hover:bg-[#593414] text-white text-sm font-semibold shrink-0 transition-colors">
+            <a href="https://www.youtube.com/watch?v=sLcjMjYmAkg" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold shrink-0 transition-colors shadow-lg shadow-blue-900/20">
               <i data-lucide="play-circle" class="w-4 h-4"></i>
               <span>Ver en YouTube</span>
             </a>
@@ -184,15 +187,15 @@
           </h3>
           <ul class="space-y-3.5 text-sm text-stone-600 dark:text-stone-300">
             <li class="flex items-start gap-2.5">
-              <span class="w-2 h-2 rounded-full bg-[#43270a] dark:bg-brand-400 mt-1.5 shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-brand-600 mt-1.5 shrink-0"></span>
               <div><strong>Agentes especializados (Agent Atlas &amp; Product Set Agent):</strong> <em>Agent Atlas</em> atiende la interacción directa con el cliente y los flujos de ingreso/soporte, mientras el <em>Product Set Agent</em> apoya tareas específicas de armado de conjuntos de productos.</div>
             </li>
             <li class="flex items-start gap-2.5">
-              <span class="w-2 h-2 rounded-full bg-[#784820] dark:bg-amber-400 mt-1.5 shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-sky-500 mt-1.5 shrink-0"></span>
               <div><strong>Microsoft Copilot Studio:</strong> Capa conversacional y de orquestación que interpreta intenciones y coordina respuestas y acciones.</div>
             </li>
             <li class="flex items-start gap-2.5">
-              <span class="w-2 h-2 rounded-full bg-brand-500 mt-1.5 shrink-0"></span>
+              <span class="w-2 h-2 rounded-full bg-slate-500 mt-1.5 shrink-0"></span>
               <div><strong>Power Automate:</strong> Brazo ejecutor para automatizar procesos, creación de casos y lógica de enrutamiento.</div>
             </li>
             <li class="flex items-start gap-2.5">
@@ -213,7 +216,8 @@
           Presentar este caso ante el equipo de <strong>Microsoft Customer Advisory Team (CAT)</strong> fue una experiencia clave tanto en lo técnico como en lo profesional: validar decisiones de diseño, seguridad de datos y experiencia de usuario frente a arquitectos y especialistas que acompañan despliegues de alto impacto.
         </p>
 
-        <blockquote class="my-8 p-6 rounded-2xl bg-brand-50/80 dark:bg-brand-950/40 border-l-4 border-[#43270a] dark:border-brand-400 italic text-stone-800 dark:text-stone-200">
+        <blockquote
+          class="my-8 p-6 rounded-2xl bg-brand-50/70 dark:bg-brand-950/40 border-l-4 border-brand-600 dark:border-brand-400 italic text-slate-800 dark:text-slate-200">
           "Un agente aislado no genera el mismo impacto que uno bien integrado a los procesos del negocio; cuando los agentes colaboran y cuidamos la arquitectura, pasamos de simple automatización a flujos realmente inteligentes."
         </blockquote>
 

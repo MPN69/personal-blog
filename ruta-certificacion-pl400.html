@@ -28,17 +28,17 @@
           },
           colors: {
             brand: {
-              50: '#fbf7f4',
-              100: '#f5ebe2',
-              200: '#edd8c6',
-              300: '#e0bda2',
-              400: '#c59570',
-              500: '#9b643a',
-              600: '#784820',
-              700: '#593414',
-              800: '#43270a',
-              900: '#321c07',
-              950: '#1b0d03',
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb', // Azul profesional corporativo
+              700: '#1d4ed8',
+              800: '#1e40af', // Azul marino profundo
+              900: '#1e3a8a',
+              950: '#0f172a',
             }
           }
         }
@@ -52,11 +52,11 @@
 </head>
 
 <body
-  class="bg-[#faf8f6] text-stone-800 dark:bg-[#12100e] dark:text-stone-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
+  class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen antialiased flex flex-col">
 
   <!-- Navbar -->
   <header
-    class="sticky top-0 z-50 backdrop-blur-md bg-[#faf8f6]/85 dark:bg-[#12100e]/85 border-b border-stone-200/80 dark:border-stone-800/80">
+    class="sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-slate-950/85 border-b border-slate-200/80 dark:border-slate-800/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       <a href="./blog.html"
         class="inline-flex items-center gap-2 text-sm font-semibold text-stone-600 dark:text-stone-300 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
@@ -120,37 +120,62 @@
 
       <!-- Featured Banner Card -->
       <div
-        class="mb-12 rounded-3xl overflow-hidden shadow-xl border border-stone-200 dark:border-stone-800 bg-gradient-to-br from-[#241407] via-[#43270a] to-[#1b0d03] p-8 sm:p-10 text-white relative">
+        class="mb-12 rounded-3xl overflow-hidden shadow-xl border border-blue-200/20 bg-gradient-to-br from-[#0c2d57] via-[#1d4ed8] to-[#0284c7] p-8 sm:p-10 text-white relative">
+      
         <div class="grid sm:grid-cols-2 gap-6 items-center relative z-10">
+      
           <div>
             <span
-              class="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[11px] font-mono uppercase tracking-wider text-brand-200 mb-3">
+              class="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[11px] font-mono uppercase tracking-wider text-white/90 mb-3">
               De Fundamentals a Developer
             </span>
+      
             <h2 class="text-2xl sm:text-3xl font-extrabold leading-tight">
               PL-900 + PL-400
             </h2>
-            <p class="text-sm text-brand-100/90 mt-2 leading-relaxed">
-              No se trata de memorizar menús, sino de dominar cuándo usar código, cuándo configurar y cómo diseñar
-              soluciones escalables sobre Dataverse.
+      
+            <p class="text-sm text-white/80 mt-2 leading-relaxed">
+              No se trata de memorizar menús, sino de dominar cuándo usar código,
+              cuándo configurar y cómo diseñar soluciones escalables sobre Dataverse.
             </p>
           </div>
+      
           <div class="grid grid-cols-2 gap-3 font-mono text-xs">
+      
             <div class="p-4 rounded-2xl bg-black/30 border border-white/10">
-              <div class="text-brand-300 font-bold text-sm">PL-900</div>
-              <div class="text-stone-300 mt-1">Valor de negocio, ecosistema y casos de uso</div>
+              <div class="text-sky-200 font-bold text-sm">
+                PL-900
+              </div>
+      
+              <div class="text-white/70 mt-1">
+                Valor de negocio, ecosistema y casos de uso
+              </div>
             </div>
+      
             <div class="p-4 rounded-2xl bg-black/30 border border-white/10">
-              <div class="text-amber-300 font-bold text-sm">PL-400</div>
-              <div class="text-stone-300 mt-1">Extensibilidad, C#, JS, PCF, APIs y ALM</div>
+              <div class="text-cyan-200 font-bold text-sm">
+                PL-400
+              </div>
+      
+              <div class="text-white/70 mt-1">
+                Extensibilidad, C#, JS, PCF, APIs y ALM
+              </div>
             </div>
-            <div
-              class="col-span-2 p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
-              <span class="text-stone-300">Enfoque clave:</span>
-              <span class="text-brand-200 font-semibold">Arquitectura + Práctica Real</span>
+      
+            <div class="col-span-2 p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
+              <span class="text-white/70">
+                Enfoque clave:
+              </span>
+      
+              <span class="text-sky-100 font-semibold">
+                Arquitectura + Práctica Real
+              </span>
             </div>
+      
           </div>
+      
         </div>
+      
       </div>
 
       <!-- Prose / Body -->
@@ -323,7 +348,7 @@
         </ol>
 
         <blockquote
-          class="my-8 p-6 rounded-2xl bg-brand-50/80 dark:bg-brand-950/40 border-l-4 border-[#43270a] dark:border-brand-400 italic text-stone-800 dark:text-stone-200">
+          class="my-8 p-6 rounded-2xl bg-brand-50/70 dark:bg-brand-950/40 border-l-4 border-brand-600 dark:border-brand-400 italic text-slate-800 dark:text-slate-200">
           "La certificación no es un adorno en LinkedIn: cuando te enfrentas a un despliegue real en producción, haber
           entendido por qué existe cada capa de Dataverse y Power Automate te ahorra semanas de retrabajo."
         </blockquote>
